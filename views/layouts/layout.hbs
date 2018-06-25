@@ -3,8 +3,34 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
   <body>
-    {{{body}}}
+  	<div id="wrapper">
+  		<div id="header">
+			<div id="logo">
+				<a class="blog-title" href="/">Building Board</a>
+				<div class="description">This is where owner/tenants communicate</div>
+			</div>
+			<nav id="nav" class="main-nav">
+				<ul id="menu-home" class="top-menu">
+					<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
+						<a href="javascript:void(0)" class="cd-signup" target="_self">Sign Up</a>
+					</li>
+					<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274">
+						<a href="javascript:void(0)" class="cd-signin" target="_self">Sign In</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="clear"></div>
+		</div>
+		<div id="main">
+			{{> register_modal}}
+    		{{{body}}}
+    	</div>
+    	<div class="clear"></div>
+    	{{> footer }}
+	</div>
   </body>
 </html>

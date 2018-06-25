@@ -9,6 +9,7 @@ router.get('/', homeController.home);
 //member controller
 const memberController = require('../controllers/members');
 router.get('/signup', memberController.singup);
+router.get('/signin', memberController.signin);
 //member controller end
 
 module.exports = router;

@@ -1,0 +1,1411 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'latest-version' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 warn package.json copy-descriptor@0.1.1 No README data
+5 warn package.json get-value@2.0.6 No README data
+6 warn package.json object-copy@0.1.0 No README data
+7 warn package.json path-is-inside@1.0.2 No README data
+8 warn package.json pstree.remy@1.1.0 No repository field.
+9 warn package.json pstree.remy@1.1.0 No README data
+10 warn package.json static-extend@0.1.2 No README data
+11 warn package.json bcrypt-pbkdf@1.0.1 No repository field.
+12 warn package.json punycode@1.4.1 punycode is also the name of a node core module.
+13 warn package.json string_decoder@1.1.1 string_decoder is also the name of a node core module.
+14 verbose readDependencies using package.json deps
+15 verbose cache add [ 'latest-version', null ]
+16 verbose cache add name=undefined spec="latest-version" args=["latest-version",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'latest-version',
+17 verbose parsed url   path: 'latest-version',
+17 verbose parsed url   href: 'latest-version' }
+18 silly lockFile 20406ab0-latest-version latest-version
+19 verbose lock latest-version /Users/LiJin/.npm/20406ab0-latest-version.lock
+20 silly lockFile 20406ab0-latest-version latest-version
+21 silly lockFile 20406ab0-latest-version latest-version
+22 verbose addNamed [ 'latest-version', '' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 2b5f0ac4-latest-version latest-version@
+25 verbose lock latest-version@ /Users/LiJin/.npm/2b5f0ac4-latest-version.lock
+26 silly addNameRange { name: 'latest-version', range: '*', hasData: false }
+27 verbose url raw latest-version
+28 verbose url resolving [ 'https://registry.npmjs.org/', './latest-version' ]
+29 verbose url resolved https://registry.npmjs.org/latest-version
+30 info trying registry request attempt 1 at 19:49:09
+31 http GET https://registry.npmjs.org/latest-version
+32 http 200 https://registry.npmjs.org/latest-version
+33 silly registry.get cb [ 200,
+33 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+33 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+33 silly registry.get     'transfer-encoding': 'chunked',
+33 silly registry.get     connection: 'keep-alive',
+33 silly registry.get     'set-cookie': [ '__cfduid=de005ad62409e0be2e334034b5f27321b1529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+33 silly registry.get     'cache-control': 'max-age=300',
+33 silly registry.get     'cf-cache-status': 'HIT',
+33 silly registry.get     'cf-ray': '42f2f4002b5155ac-ORD',
+33 silly registry.get     etag: 'W/"1b6170e6e1cddba395ece498743a33a4"',
+33 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+33 silly registry.get     'last-modified': 'Sat, 09 Jun 2018 13:15:23 GMT',
+33 silly registry.get     vary: 'accept-encoding, accept',
+33 silly registry.get     server: 'cloudflare',
+33 silly registry.get     'content-encoding': 'gzip' } ]
+34 silly addNameRange number 2 { name: 'latest-version', range: '*', hasData: true }
+35 silly addNameRange versions [ 'latest-version',
+35 silly addNameRange   [ '0.1.0',
+35 silly addNameRange     '0.1.1',
+35 silly addNameRange     '0.1.2',
+35 silly addNameRange     '0.2.0',
+35 silly addNameRange     '1.0.0',
+35 silly addNameRange     '1.0.1',
+35 silly addNameRange     '2.0.0',
+35 silly addNameRange     '3.0.0',
+35 silly addNameRange     '3.1.0',
+35 silly addNameRange     '4.0.0' ] ]
+36 verbose addNamed [ 'latest-version', '4.0.0' ]
+37 verbose addNamed [ '4.0.0', '4.0.0' ]
+38 silly lockFile 49aa89a3-latest-version-4-0-0 latest-version@4.0.0
+39 verbose lock latest-version@4.0.0 /Users/LiJin/.npm/49aa89a3-latest-version-4-0-0.lock
+40 silly lockFile ea7442c4-version-latest-version-4-0-0-tgz https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz
+41 verbose lock https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz /Users/LiJin/.npm/ea7442c4-version-latest-version-4-0-0-tgz.lock
+42 verbose addRemoteTarball [ 'https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz',
+42 verbose addRemoteTarball   '9542393ac55a585861a4c4ebc02389a0b4a9c332' ]
+43 info retry fetch attempt 1 at 19:49:09
+44 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz
+45 http GET https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz
+46 http 200 https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz
+47 silly lockFile ea7442c4-version-latest-version-4-0-0-tgz https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz
+48 silly lockFile ea7442c4-version-latest-version-4-0-0-tgz https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz
+49 silly lockFile 49aa89a3-latest-version-4-0-0 latest-version@4.0.0
+50 silly lockFile 49aa89a3-latest-version-4-0-0 latest-version@4.0.0
+51 silly lockFile 2b5f0ac4-latest-version latest-version@
+52 silly lockFile 2b5f0ac4-latest-version latest-version@
+53 silly resolved [ { name: 'latest-version',
+53 silly resolved     version: '4.0.0',
+53 silly resolved     description: 'Get the latest version of an npm package',
+53 silly resolved     license: 'MIT',
+53 silly resolved     repository:
+53 silly resolved      { type: 'git',
+53 silly resolved        url: 'git+https://github.com/sindresorhus/latest-version.git' },
+53 silly resolved     author:
+53 silly resolved      { name: 'Sindre Sorhus',
+53 silly resolved        email: 'sindresorhus@gmail.com',
+53 silly resolved        url: 'sindresorhus.com' },
+53 silly resolved     engines: { node: '>=6' },
+53 silly resolved     scripts: { test: 'xo && ava' },
+53 silly resolved     files: [ 'index.js' ],
+53 silly resolved     keywords:
+53 silly resolved      [ 'latest',
+53 silly resolved        'version',
+53 silly resolved        'npm',
+53 silly resolved        'pkg',
+53 silly resolved        'package',
+53 silly resolved        'package.json',
+53 silly resolved        'current',
+53 silly resolved        'module' ],
+53 silly resolved     dependencies: { 'package-json': '^5.0.0' },
+53 silly resolved     devDependencies: { ava: '*', semver: '^5.4.1', 'semver-regex': '^2.0.0', xo: '*' },
+53 silly resolved     gitHead: '9644131e0878181be89d4f546ef19905e283fdd7',
+53 silly resolved     bugs: { url: 'https://github.com/sindresorhus/latest-version/issues' },
+53 silly resolved     homepage: 'https://github.com/sindresorhus/latest-version#readme',
+53 silly resolved     _id: 'latest-version@4.0.0',
+53 silly resolved     _npmVersion: '5.6.0',
+53 silly resolved     _nodeVersion: '8.11.2',
+53 silly resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+53 silly resolved     dist:
+53 silly resolved      { integrity: 'sha512-b4Myk7aQiQJvgssw2O8yITjELdqKRX4JQJUF1IUplgLaA8unv7s+UsAOwH6Q0/a09czSvlxEm306it2LBXrCzg==',
+53 silly resolved        shasum: '9542393ac55a585861a4c4ebc02389a0b4a9c332',
+53 silly resolved        tarball: 'https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz',
+53 silly resolved        fileCount: 4,
+53 silly resolved        unpackedSize: 3089,
+53 silly resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbG9LnCRA9TVsSAnZWagAAoLoP/0X1PvtY1B7OLvHaVUnm\nT7p8SajasOVf2cRDSAIxLnOW0vKioLzy3Vz9cN+Zp6tpUfsDuKpd7GzULxvr\nk10mLlLYVyeQGSYwYkwe9Gn6ZKhCCSVVEumT5KnttXwqewvz1yGF8utAeSqV\n10K8okeTfSkW045z5DKAEpagXVf9b4cUdsXfxEsaRIQppfWxJZ3SX82m1VZK\nH7vPqCtcfp02X2X3WmtdlbBgiYU7KFe75pQAlCca3ub/AzCY03VIiuR5xwYP\nTceNCtyReWZAIuPhfXIeUhbdCqIxvDymw39HPmF306KOrszcezMl9A4oTdhU\nMZNlqcPE4s7ErxEwkcxwWkAh1kXryT2lBI3Yz8gCYlg5j9ZjKHrGO6WSr7Y2\nA1gEEkZCy2zf7Xksy64cLayvOtyfaXJgJB1/HVDGyZS1rxdyXPcIdy4g7f0x\n3qVg3G6ylpZttQQsgyAHHItfmFv2KAAxy/teylozPtXrIInnL3ma64WZYwuU\nwmRpPyuD1TaJz6T20uWQYyyxeMvz12Cxsi008TUDjjqcVa4rekIkpxrMVUdC\nG0EWiPw7gprx+TJI2P0W7unfapBdnNOlvKGyrUmBCr4TJy5v6V8f2zJoRGEF\nQIPgpx37ztWLM1h5OJJfMbE75DsVWz9zzoYNX8cxJhDgeA+NYpPtP1xDdHIe\n/hIr\r\n=1/pd\r\n-----END PGP SIGNATURE-----\r\n' },
+53 silly resolved     maintainers: [ [Object] ],
+53 silly resolved     directories: {},
+53 silly resolved     _npmOperationalInternal:
+53 silly resolved      { host: 's3://npm-registry-packages',
+53 silly resolved        tmp: 'tmp/latest-version_4.0.0_1528550119151_0.45115227361449994' },
+53 silly resolved     _shasum: '9542393ac55a585861a4c4ebc02389a0b4a9c332',
+53 silly resolved     _from: 'latest-version@',
+53 silly resolved     _resolved: 'https://registry.npmjs.org/latest-version/-/latest-version-4.0.0.tgz' } ]
+54 info install latest-version@4.0.0 into /Users/LiJin/projects/chichi/chichi
+55 info installOne latest-version@4.0.0
+56 warn engine latest-version@4.0.0: wanted: {"node":">=6"} (current: {"node":"v0.10.29","npm":"1.4.14"})
+57 info /Users/LiJin/projects/chichi/chichi/node_modules/latest-version unbuild
+58 info preuninstall latest-version@3.1.0
+59 info uninstall latest-version@3.1.0
+60 verbose true,/Users/LiJin/projects/chichi/chichi/node_modules,/Users/LiJin/projects/chichi/chichi/node_modules unbuild latest-version@3.1.0
+61 info postuninstall latest-version@3.1.0
+62 verbose tar unpack /Users/LiJin/.npm/latest-version/4.0.0/package.tgz
+63 silly lockFile 7b058ad2-ichi-node-modules-latest-version tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version
+64 verbose lock tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version /Users/LiJin/.npm/7b058ad2-ichi-node-modules-latest-version.lock
+65 silly lockFile 772707e2-latest-version-4-0-0-package-tgz tar:///Users/LiJin/.npm/latest-version/4.0.0/package.tgz
+66 verbose lock tar:///Users/LiJin/.npm/latest-version/4.0.0/package.tgz /Users/LiJin/.npm/772707e2-latest-version-4-0-0-package-tgz.lock
+67 silly gunzTarPerm modes [ '755', '644' ]
+68 silly gunzTarPerm extractEntry package.json
+69 silly gunzTarPerm extractEntry index.js
+70 silly gunzTarPerm extractEntry license
+71 silly gunzTarPerm extractEntry readme.md
+72 silly lockFile 7b058ad2-ichi-node-modules-latest-version tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version
+73 silly lockFile 7b058ad2-ichi-node-modules-latest-version tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version
+74 silly lockFile 772707e2-latest-version-4-0-0-package-tgz tar:///Users/LiJin/.npm/latest-version/4.0.0/package.tgz
+75 silly lockFile 772707e2-latest-version-4-0-0-package-tgz tar:///Users/LiJin/.npm/latest-version/4.0.0/package.tgz
+76 info preinstall latest-version@4.0.0
+77 verbose readDependencies using package.json deps
+78 verbose readDependencies using package.json deps
+79 verbose cache add [ 'package-json@^5.0.0', null ]
+80 verbose cache add name=undefined spec="package-json@^5.0.0" args=["package-json@^5.0.0",null]
+81 verbose parsed url { protocol: null,
+81 verbose parsed url   slashes: null,
+81 verbose parsed url   auth: null,
+81 verbose parsed url   host: null,
+81 verbose parsed url   port: null,
+81 verbose parsed url   hostname: null,
+81 verbose parsed url   hash: null,
+81 verbose parsed url   search: null,
+81 verbose parsed url   query: null,
+81 verbose parsed url   pathname: 'package-json@^5.0.0',
+81 verbose parsed url   path: 'package-json@^5.0.0',
+81 verbose parsed url   href: 'package-json@^5.0.0' }
+82 verbose cache add name="package-json" spec="^5.0.0" args=["package-json","^5.0.0"]
+83 verbose parsed url { protocol: null,
+83 verbose parsed url   slashes: null,
+83 verbose parsed url   auth: null,
+83 verbose parsed url   host: null,
+83 verbose parsed url   port: null,
+83 verbose parsed url   hostname: null,
+83 verbose parsed url   hash: null,
+83 verbose parsed url   search: null,
+83 verbose parsed url   query: null,
+83 verbose parsed url   pathname: '^5.0.0',
+83 verbose parsed url   path: '^5.0.0',
+83 verbose parsed url   href: '^5.0.0' }
+84 verbose addNamed [ 'package-json', '^5.0.0' ]
+85 verbose addNamed [ null, '>=5.0.0-0 <6.0.0-0' ]
+86 silly lockFile 16199236-package-json-5-0-0 package-json@^5.0.0
+87 verbose lock package-json@^5.0.0 /Users/LiJin/.npm/16199236-package-json-5-0-0.lock
+88 silly addNameRange { name: 'package-json',
+88 silly addNameRange   range: '>=5.0.0-0 <6.0.0-0',
+88 silly addNameRange   hasData: false }
+89 verbose url raw package-json
+90 verbose url resolving [ 'https://registry.npmjs.org/', './package-json' ]
+91 verbose url resolved https://registry.npmjs.org/package-json
+92 info trying registry request attempt 1 at 19:49:09
+93 http GET https://registry.npmjs.org/package-json
+94 http 200 https://registry.npmjs.org/package-json
+95 silly registry.get cb [ 200,
+95 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+95 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+95 silly registry.get     'transfer-encoding': 'chunked',
+95 silly registry.get     connection: 'keep-alive',
+95 silly registry.get     'set-cookie': [ '__cfduid=db6dfb22862d604be731233561d360d261529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+95 silly registry.get     'cache-control': 'max-age=300',
+95 silly registry.get     'cf-cache-status': 'HIT',
+95 silly registry.get     'cf-ray': '42f2f400fd5b7125-ORD',
+95 silly registry.get     etag: 'W/"14e1b71a4699338927f47bc2f4ce72f4"',
+95 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+95 silly registry.get     'last-modified': 'Sun, 27 May 2018 11:42:38 GMT',
+95 silly registry.get     vary: 'accept-encoding, accept',
+95 silly registry.get     server: 'cloudflare',
+95 silly registry.get     'content-encoding': 'gzip' } ]
+96 silly addNameRange number 2 { name: 'package-json',
+96 silly addNameRange   range: '>=5.0.0-0 <6.0.0-0',
+96 silly addNameRange   hasData: true }
+97 silly addNameRange versions [ 'package-json',
+97 silly addNameRange   [ '0.1.0',
+97 silly addNameRange     '0.2.0',
+97 silly addNameRange     '1.0.0',
+97 silly addNameRange     '1.0.1',
+97 silly addNameRange     '1.0.2',
+97 silly addNameRange     '1.1.0',
+97 silly addNameRange     '1.2.0',
+97 silly addNameRange     '2.0.0',
+97 silly addNameRange     '2.0.1',
+97 silly addNameRange     '2.1.0',
+97 silly addNameRange     '2.2.0',
+97 silly addNameRange     '2.2.1',
+97 silly addNameRange     '2.3.0',
+97 silly addNameRange     '2.3.1',
+97 silly addNameRange     '2.3.2',
+97 silly addNameRange     '2.3.3',
+97 silly addNameRange     '2.4.0',
+97 silly addNameRange     '3.0.0',
+97 silly addNameRange     '3.1.0',
+97 silly addNameRange     '4.0.0',
+97 silly addNameRange     '4.0.1',
+97 silly addNameRange     '5.0.0' ] ]
+98 verbose addNamed [ 'package-json', '5.0.0' ]
+99 verbose addNamed [ '5.0.0', '5.0.0' ]
+100 silly lockFile 334f3262-package-json-5-0-0 package-json@5.0.0
+101 verbose lock package-json@5.0.0 /Users/LiJin/.npm/334f3262-package-json-5-0-0.lock
+102 silly lockFile c61d21fc-kage-json-package-json-5-0-0-tgz https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz
+103 verbose lock https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz /Users/LiJin/.npm/c61d21fc-kage-json-package-json-5-0-0-tgz.lock
+104 verbose addRemoteTarball [ 'https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz',
+104 verbose addRemoteTarball   'a7dbe2725edcc7dc9bcee627672275e323882433' ]
+105 info retry fetch attempt 1 at 19:49:09
+106 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/package-json/-/package-json-5.0.0.tgz
+107 http GET https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz
+108 http 200 https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz
+109 silly lockFile c61d21fc-kage-json-package-json-5-0-0-tgz https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz
+110 silly lockFile c61d21fc-kage-json-package-json-5-0-0-tgz https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz
+111 silly lockFile 334f3262-package-json-5-0-0 package-json@5.0.0
+112 silly lockFile 334f3262-package-json-5-0-0 package-json@5.0.0
+113 silly lockFile 16199236-package-json-5-0-0 package-json@^5.0.0
+114 silly lockFile 16199236-package-json-5-0-0 package-json@^5.0.0
+115 silly resolved [ { name: 'package-json',
+115 silly resolved     version: '5.0.0',
+115 silly resolved     description: 'Get metadata of a package from the npm registry',
+115 silly resolved     license: 'MIT',
+115 silly resolved     repository:
+115 silly resolved      { type: 'git',
+115 silly resolved        url: 'git+https://github.com/sindresorhus/package-json.git' },
+115 silly resolved     author:
+115 silly resolved      { name: 'Sindre Sorhus',
+115 silly resolved        email: 'sindresorhus@gmail.com',
+115 silly resolved        url: 'sindresorhus.com' },
+115 silly resolved     engines: { node: '>=6' },
+115 silly resolved     scripts: { test: 'xo && ava' },
+115 silly resolved     files: [ 'index.js' ],
+115 silly resolved     keywords:
+115 silly resolved      [ 'npm',
+115 silly resolved        'registry',
+115 silly resolved        'package',
+115 silly resolved        'pkg',
+115 silly resolved        'package.json',
+115 silly resolved        'json',
+115 silly resolved        'module',
+115 silly resolved        'scope',
+115 silly resolved        'scoped' ],
+115 silly resolved     dependencies:
+115 silly resolved      { got: '^8.3.1',
+115 silly resolved        'registry-auth-token': '^3.3.2',
+115 silly resolved        'registry-url': '^3.1.0',
+115 silly resolved        semver: '^5.5.0' },
+115 silly resolved     devDependencies: { ava: '*', 'mock-private-registry': '^1.1.2', xo: '*' },
+115 silly resolved     gitHead: '1a7f10d016f6dd29fb2931831d60866e68a95611',
+115 silly resolved     bugs: { url: 'https://github.com/sindresorhus/package-json/issues' },
+115 silly resolved     homepage: 'https://github.com/sindresorhus/package-json#readme',
+115 silly resolved     _id: 'package-json@5.0.0',
+115 silly resolved     _npmVersion: '6.0.1',
+115 silly resolved     _nodeVersion: '8.11.1',
+115 silly resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+115 silly resolved     dist:
+115 silly resolved      { integrity: 'sha512-EeHQFFTlEmLrkIQoxbE9w0FuAWHoc1XpthDqnZ/i9keOt701cteyXwAxQFLpVqVjj3feh2TodkihjLaRUtIgLg==',
+115 silly resolved        shasum: 'a7dbe2725edcc7dc9bcee627672275e323882433',
+115 silly resolved        tarball: 'https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz',
+115 silly resolved        fileCount: 4,
+115 silly resolved        unpackedSize: 5726,
+115 silly resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/UCwCRA9TVsSAnZWagAA4HoP/217V8FmNtWCi8Rbhllr\ngjw1W6Lvb+2UOgJGxpR2IFOQ/bKiK0831UU4A0sWJOyPoWjxD1ks8mA9a7tA\nXGWK7G6FbqO3pRWQXnk4mw/ZYdqxPqVmmbTjEe2rljrATOUNAmHE7nBPgHoQ\ntgR0IvFFKyAWRLk3/WxA2kr3z2BcExUNLG5KmOS5Xs8ZLYZ8ugyXth3IyAHI\n33L3Q822ivhtmKUS4iYPdHYYs3T3+nnQEBb7cJPvFmDtsfUXxz0kSZTsPDJD\nnNep0TEfr/zm2C0G4g+K2qN+IBX9U3ueABaLiUHL1uquIiKSEwjV4uWX4WFT\neDn/thZ5GQ00FurrLFz9di4Bh4FHxTHM2mvhM3/GfIYJg54p/7+dtW+MFTNy\nU1hufrPnUvVHLWuUpLia/YKzSJDKTygIP0YvZlK0HN7+Mv1nlEVCNqjESLoL\nSat4zDZ6NZkvwtKodkyTbS2tKXioMmhOTV8LMaccSFf28DpOqdSpbkQobkda\neHLmCHycOAJ2uGKG1IzoJFACX823grWGnbnEhCiWqGN0TwjknyWW/qPQxLXJ\nhcXJS6GBx3oegYoXvlXAZWgW3pDkX0k4BgEfOyiCrM8feyKe4ANms1A5ooOG\nnbJJjV2uTKtoaiPcZ2gicAZSMHrI9v+39/X2S5mRwj6kPpfLKwlAf1ZjpqZa\nvnMl\r\n=ap49\r\n-----END PGP SIGNATURE-----\r\n' },
+115 silly resolved     maintainers: [ [Object], [Object] ],
+115 silly resolved     directories: {},
+115 silly resolved     _npmOperationalInternal:
+115 silly resolved      { host: 's3://npm-registry-packages',
+115 silly resolved        tmp: 'tmp/package-json_5.0.0_1526546608199_0.9080538288939315' },
+115 silly resolved     _shasum: 'a7dbe2725edcc7dc9bcee627672275e323882433',
+115 silly resolved     _from: 'package-json@^5.0.0',
+115 silly resolved     _resolved: 'https://registry.npmjs.org/package-json/-/package-json-5.0.0.tgz' } ]
+116 info install package-json@5.0.0 into /Users/LiJin/projects/chichi/chichi/node_modules/latest-version
+117 info installOne package-json@5.0.0
+118 warn engine package-json@5.0.0: wanted: {"node":">=6"} (current: {"node":"v0.10.29","npm":"1.4.14"})
+119 info /Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json unbuild
+120 verbose tar unpack /Users/LiJin/.npm/package-json/5.0.0/package.tgz
+121 silly lockFile 40077af2-ersion-node-modules-package-json tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json
+122 verbose lock tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json /Users/LiJin/.npm/40077af2-ersion-node-modules-package-json.lock
+123 silly lockFile 75337302-m-package-json-5-0-0-package-tgz tar:///Users/LiJin/.npm/package-json/5.0.0/package.tgz
+124 verbose lock tar:///Users/LiJin/.npm/package-json/5.0.0/package.tgz /Users/LiJin/.npm/75337302-m-package-json-5-0-0-package-tgz.lock
+125 silly gunzTarPerm modes [ '755', '644' ]
+126 silly gunzTarPerm extractEntry package.json
+127 silly gunzTarPerm extractEntry index.js
+128 silly gunzTarPerm extractEntry license
+129 silly gunzTarPerm extractEntry readme.md
+130 silly lockFile 40077af2-ersion-node-modules-package-json tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json
+131 silly lockFile 40077af2-ersion-node-modules-package-json tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json
+132 silly lockFile 75337302-m-package-json-5-0-0-package-tgz tar:///Users/LiJin/.npm/package-json/5.0.0/package.tgz
+133 silly lockFile 75337302-m-package-json-5-0-0-package-tgz tar:///Users/LiJin/.npm/package-json/5.0.0/package.tgz
+134 info preinstall package-json@5.0.0
+135 verbose readDependencies using package.json deps
+136 verbose readDependencies using package.json deps
+137 verbose cache add [ 'got@^8.3.1', null ]
+138 verbose cache add name=undefined spec="got@^8.3.1" args=["got@^8.3.1",null]
+139 verbose parsed url { protocol: null,
+139 verbose parsed url   slashes: null,
+139 verbose parsed url   auth: null,
+139 verbose parsed url   host: null,
+139 verbose parsed url   port: null,
+139 verbose parsed url   hostname: null,
+139 verbose parsed url   hash: null,
+139 verbose parsed url   search: null,
+139 verbose parsed url   query: null,
+139 verbose parsed url   pathname: 'got@^8.3.1',
+139 verbose parsed url   path: 'got@^8.3.1',
+139 verbose parsed url   href: 'got@^8.3.1' }
+140 verbose cache add name="got" spec="^8.3.1" args=["got","^8.3.1"]
+141 verbose parsed url { protocol: null,
+141 verbose parsed url   slashes: null,
+141 verbose parsed url   auth: null,
+141 verbose parsed url   host: null,
+141 verbose parsed url   port: null,
+141 verbose parsed url   hostname: null,
+141 verbose parsed url   hash: null,
+141 verbose parsed url   search: null,
+141 verbose parsed url   query: null,
+141 verbose parsed url   pathname: '^8.3.1',
+141 verbose parsed url   path: '^8.3.1',
+141 verbose parsed url   href: '^8.3.1' }
+142 verbose addNamed [ 'got', '^8.3.1' ]
+143 verbose addNamed [ null, '>=8.3.1-0 <9.0.0-0' ]
+144 silly lockFile 12f5e701-got-8-3-1 got@^8.3.1
+145 verbose lock got@^8.3.1 /Users/LiJin/.npm/12f5e701-got-8-3-1.lock
+146 silly addNameRange { name: 'got', range: '>=8.3.1-0 <9.0.0-0', hasData: false }
+147 verbose url raw got
+148 verbose url resolving [ 'https://registry.npmjs.org/', './got' ]
+149 verbose url resolved https://registry.npmjs.org/got
+150 info trying registry request attempt 1 at 19:49:09
+151 http GET https://registry.npmjs.org/got
+152 http 200 https://registry.npmjs.org/got
+153 silly registry.get cb [ 200,
+153 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+153 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+153 silly registry.get     'transfer-encoding': 'chunked',
+153 silly registry.get     connection: 'keep-alive',
+153 silly registry.get     'set-cookie': [ '__cfduid=d930610c9fe4f5b37a58b93271ccb98041529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+153 silly registry.get     'cache-control': 'max-age=300',
+153 silly registry.get     'cf-cache-status': 'HIT',
+153 silly registry.get     'cf-ray': '42f2f4031859714f-ORD',
+153 silly registry.get     etag: 'W/"6322d76da6060d69140e30292f70e5db"',
+153 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+153 silly registry.get     'last-modified': 'Sun, 27 May 2018 02:37:53 GMT',
+153 silly registry.get     vary: 'accept-encoding, accept',
+153 silly registry.get     server: 'cloudflare',
+153 silly registry.get     'content-encoding': 'gzip' } ]
+154 silly addNameRange number 2 { name: 'got', range: '>=8.3.1-0 <9.0.0-0', hasData: true }
+155 silly addNameRange versions [ 'got',
+155 silly addNameRange   [ '0.1.0',
+155 silly addNameRange     '0.1.1',
+155 silly addNameRange     '0.2.0',
+155 silly addNameRange     '0.3.0',
+155 silly addNameRange     '1.0.0',
+155 silly addNameRange     '1.0.1',
+155 silly addNameRange     '1.1.0',
+155 silly addNameRange     '1.2.0',
+155 silly addNameRange     '1.2.1',
+155 silly addNameRange     '1.2.2',
+155 silly addNameRange     '2.0.0',
+155 silly addNameRange     '2.1.0',
+155 silly addNameRange     '2.2.0',
+155 silly addNameRange     '2.3.0',
+155 silly addNameRange     '2.3.1',
+155 silly addNameRange     '2.3.2',
+155 silly addNameRange     '2.4.0',
+155 silly addNameRange     '2.5.0',
+155 silly addNameRange     '2.6.0',
+155 silly addNameRange     '2.7.0',
+155 silly addNameRange     '2.7.1',
+155 silly addNameRange     '2.7.2',
+155 silly addNameRange     '2.8.0',
+155 silly addNameRange     '2.8.1',
+155 silly addNameRange     '2.9.0',
+155 silly addNameRange     '2.9.1',
+155 silly addNameRange     '2.9.2',
+155 silly addNameRange     '3.0.0',
+155 silly addNameRange     '3.1.0',
+155 silly addNameRange     '3.2.0',
+155 silly addNameRange     '3.3.0',
+155 silly addNameRange     '3.3.1',
+155 silly addNameRange     '4.0.0',
+155 silly addNameRange     '4.1.0',
+155 silly addNameRange     '4.1.1',
+155 silly addNameRange     '4.2.0',
+155 silly addNameRange     '5.0.0',
+155 silly addNameRange     '5.1.0',
+155 silly addNameRange     '5.2.0',
+155 silly addNameRange     '6.0.0-rc1',
+155 silly addNameRange     '5.2.1',
+155 silly addNameRange     '5.3.0',
+155 silly addNameRange     '6.0.0',
+155 silly addNameRange     '6.0.1',
+155 silly addNameRange     '5.3.1',
+155 silly addNameRange     '5.3.2',
+155 silly addNameRange     '6.0.2',
+155 silly addNameRange     '5.4.0',
+155 silly addNameRange     '6.1.0',
+155 silly addNameRange     '5.4.1',
+155 silly addNameRange     '6.1.1',
+155 silly addNameRange     '6.1.2',
+155 silly addNameRange     '5.4.2',
+155 silly addNameRange     '6.2.0',
+155 silly addNameRange     '5.5.0',
+155 silly addNameRange     '5.5.1',
+155 silly addNameRange     '5.6.0',
+155 silly addNameRange     '6.3.0',
+155 silly addNameRange     '6.5.0',
+155 silly addNameRange     '5.7.0',
+155 silly addNameRange     '6.6.0',
+155 silly addNameRange     '6.6.1',
+155 silly addNameRange     '5.7.1',
+155 silly addNameRange     '6.6.2',
+155 silly addNameRange     '6.6.3',
+155 silly addNameRange     '6.7.0',
+155 silly addNameRange     '6.7.1',
+155 silly addNameRange     '7.0.0',
+155 silly addNameRange     '7.1.0',
+155 silly addNameRange     '8.0.0',
+155 silly addNameRange     '8.0.1',
+155 silly addNameRange     '8.0.2',
+155 silly addNameRange     '8.0.3',
+155 silly addNameRange     '8.1.0',
+155 silly addNameRange     '8.2.0',
+155 silly addNameRange     '8.3.0',
+155 silly addNameRange     '8.3.1' ] ]
+156 verbose addNamed [ 'got', '8.3.1' ]
+157 verbose addNamed [ '8.3.1', '8.3.1' ]
+158 silly lockFile 1a56b8db-got-8-3-1 got@8.3.1
+159 verbose lock got@8.3.1 /Users/LiJin/.npm/1a56b8db-got-8-3-1.lock
+160 silly lockFile f9d80785-stry-npmjs-org-got-got-8-3-1-tgz https://registry.npmjs.org/got/-/got-8.3.1.tgz
+161 verbose lock https://registry.npmjs.org/got/-/got-8.3.1.tgz /Users/LiJin/.npm/f9d80785-stry-npmjs-org-got-got-8-3-1-tgz.lock
+162 verbose addRemoteTarball [ 'https://registry.npmjs.org/got/-/got-8.3.1.tgz',
+162 verbose addRemoteTarball   '093324403d4d955f5a16a7a8d39955d055ae10ed' ]
+163 info retry fetch attempt 1 at 19:49:09
+164 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/got/-/got-8.3.1.tgz
+165 http GET https://registry.npmjs.org/got/-/got-8.3.1.tgz
+166 http 200 https://registry.npmjs.org/got/-/got-8.3.1.tgz
+167 silly lockFile f9d80785-stry-npmjs-org-got-got-8-3-1-tgz https://registry.npmjs.org/got/-/got-8.3.1.tgz
+168 silly lockFile f9d80785-stry-npmjs-org-got-got-8-3-1-tgz https://registry.npmjs.org/got/-/got-8.3.1.tgz
+169 silly lockFile 1a56b8db-got-8-3-1 got@8.3.1
+170 silly lockFile 1a56b8db-got-8-3-1 got@8.3.1
+171 silly lockFile 12f5e701-got-8-3-1 got@^8.3.1
+172 silly lockFile 12f5e701-got-8-3-1 got@^8.3.1
+173 silly resolved [ { name: 'got',
+173 silly resolved     version: '8.3.1',
+173 silly resolved     description: 'Simplified HTTP requests',
+173 silly resolved     license: 'MIT',
+173 silly resolved     repository:
+173 silly resolved      { type: 'git',
+173 silly resolved        url: 'git+https://github.com/sindresorhus/got.git' },
+173 silly resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+173 silly resolved     engines: { node: '>=4' },
+173 silly resolved     scripts:
+173 silly resolved      { test: 'xo && nyc ava',
+173 silly resolved        coveralls: 'nyc report --reporter=text-lcov | coveralls' },
+173 silly resolved     files: [ 'index.js', 'errors.js' ],
+173 silly resolved     keywords:
+173 silly resolved      [ 'http',
+173 silly resolved        'https',
+173 silly resolved        'get',
+173 silly resolved        'got',
+173 silly resolved        'url',
+173 silly resolved        'uri',
+173 silly resolved        'request',
+173 silly resolved        'util',
+173 silly resolved        'utility',
+173 silly resolved        'simple',
+173 silly resolved        'curl',
+173 silly resolved        'wget',
+173 silly resolved        'fetch',
+173 silly resolved        'net',
+173 silly resolved        'network',
+173 silly resolved        'electron' ],
+173 silly resolved     dependencies:
+173 silly resolved      { '@sindresorhus/is': '^0.7.0',
+173 silly resolved        'cacheable-request': '^2.1.1',
+173 silly resolved        'decompress-response': '^3.3.0',
+173 silly resolved        duplexer3: '^0.1.4',
+173 silly resolved        'get-stream': '^3.0.0',
+173 silly resolved        'into-stream': '^3.1.0',
+173 silly resolved        'is-retry-allowed': '^1.1.0',
+173 silly resolved        isurl: '^1.0.0-alpha5',
+173 silly resolved        'lowercase-keys': '^1.0.0',
+173 silly resolved        'mimic-response': '^1.0.0',
+173 silly resolved        'p-cancelable': '^0.4.0',
+173 silly resolved        'p-timeout': '^2.0.1',
+173 silly resolved        pify: '^3.0.0',
+173 silly resolved        'safe-buffer': '^5.1.1',
+173 silly resolved        'timed-out': '^4.0.1',
+173 silly resolved        'url-parse-lax': '^3.0.0',
+173 silly resolved        'url-to-options': '^1.0.1' },
+173 silly resolved     devDependencies:
+173 silly resolved      { ava: '^0.25.0',
+173 silly resolved        coveralls: '^3.0.0',
+173 silly resolved        'form-data': '^2.1.1',
+173 silly resolved        'get-port': '^3.0.0',
+173 silly resolved        nyc: '^11.0.2',
+173 silly resolved        'p-event': '^1.3.0',
+173 silly resolved        pem: '^1.4.4',
+173 silly resolved        proxyquire: '^1.8.0',
+173 silly resolved        sinon: '^4.0.0',
+173 silly resolved        'slow-stream': '0.0.4',
+173 silly resolved        tempfile: '^2.0.0',
+173 silly resolved        tempy: '^0.2.1',
+173 silly resolved        'universal-url': '1.0.0-alpha',
+173 silly resolved        xo: '^0.20.0' },
+173 silly resolved     ava: { concurrency: 4 },
+173 silly resolved     browser: { 'decompress-response': false, electron: false },
+173 silly resolved     gitHead: 'bd3315b6c61d20a68944831d8b3a05046d5554ad',
+173 silly resolved     bugs: { url: 'https://github.com/sindresorhus/got/issues' },
+173 silly resolved     homepage: 'https://github.com/sindresorhus/got#readme',
+173 silly resolved     _id: 'got@8.3.1',
+173 silly resolved     _npmVersion: '5.6.0',
+173 silly resolved     _nodeVersion: '8.11.1',
+173 silly resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+173 silly resolved     dist:
+173 silly resolved      { integrity: 'sha512-tiLX+bnYm5A56T5N/n9Xo89vMaO1mrS9qoDqj3u/anVooqGozvY/HbXzEpDfbNeKsHCBpK40gSbz8wGYSp3i1w==',
+173 silly resolved        shasum: '093324403d4d955f5a16a7a8d39955d055ae10ed',
+173 silly resolved        tarball: 'https://registry.npmjs.org/got/-/got-8.3.1.tgz',
+173 silly resolved        fileCount: 5,
+173 silly resolved        unpackedSize: 42079,
+173 silly resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa6BgNCRA9TVsSAnZWagAAeNwP/34bcjZvnu7Z8s0tCxru\nfRdWjUHrBk4nIdxII0cz9uthhCDkOv6CN6R4P01zkw3U9lI5yoDPebUlqXww\n7Wz5HcODeiAWtjD2OKwDDKdi1ShTdhXKd8mvz0/CgYgLjDwzhxqJwbmSGHZt\nXA1UJfQ2k4ttlpf/7fxe5YEUBQy+vwpMUS0VT7hNEiE8N8DJtg9nj6rXCQ1b\nBIEXQLinfQKtBx6W0I6tdfWDoIJCGjbKsDqsxjCOB2fnxC7K3IBkUahAxw9v\nlNMqOzXgCj8BUkkUaJt1IBmSMr2nzG6HQ6L4MvpkTK9Qeb3bFHD8EqYgCfUB\nsTNupR7W3cXY3H9R8b22BSq+91GS8m1AMFmfVIgxbYV+qv6dSUrqFrh0fUln\n2cnZ1XjWJVvtXBWW/4xceQA8s5SuNfyyrb0kEywj9YzhGG/XfeDyj1NiQJdT\nkKnfT2BIusYR+4ePrioWU1p2KlZbVXUbLGM8yPSl7uTTJS1j/TjOcYgYQqnV\npolyw9z3nOIJPCvjwdl7GV+ea96bBKhifVP1oxqESOvRQUwNWFnD3Ear2GXj\nOfFFJXRFDEPdg7+RvgLpn6HtiR//CGiwkXFjPuLKamlCH4lud90lkA++RdAD\nrByNrS7CLf5WsTl5c2eXNmgTviBxZ18Ej83sVGnAjn0LVbL9NC87vm8TGOkw\n/8Bd\r\n=kfsS\r\n-----END PGP SIGNATURE-----\r\n' },
+173 silly resolved     directories: {},
+173 silly resolved     _npmOperationalInternal:
+173 silly resolved      { host: 's3://npm-registry-packages',
+173 silly resolved        tmp: 'tmp/got_8.3.1_1525159947345_0.628558559395153' },
+173 silly resolved     _shasum: '093324403d4d955f5a16a7a8d39955d055ae10ed',
+173 silly resolved     _from: 'got@^8.3.1',
+173 silly resolved     _resolved: 'https://registry.npmjs.org/got/-/got-8.3.1.tgz' } ]
+174 info install got@8.3.1 into /Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json
+175 info installOne got@8.3.1
+176 warn engine got@8.3.1: wanted: {"node":">=4"} (current: {"node":"v0.10.29","npm":"1.4.14"})
+177 info /Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json/node_modules/got unbuild
+178 verbose tar unpack /Users/LiJin/.npm/got/8.3.1/package.tgz
+179 silly lockFile 5b37deb2-es-package-json-node-modules-got tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json/node_modules/got
+180 verbose lock tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json/node_modules/got /Users/LiJin/.npm/5b37deb2-es-package-json-node-modules-got.lock
+181 silly lockFile bea78d88--LiJin-npm-got-8-3-1-package-tgz tar:///Users/LiJin/.npm/got/8.3.1/package.tgz
+182 verbose lock tar:///Users/LiJin/.npm/got/8.3.1/package.tgz /Users/LiJin/.npm/bea78d88--LiJin-npm-got-8-3-1-package-tgz.lock
+183 silly gunzTarPerm modes [ '755', '644' ]
+184 silly gunzTarPerm extractEntry package.json
+185 silly gunzTarPerm extractEntry errors.js
+186 silly gunzTarPerm extractEntry index.js
+187 silly gunzTarPerm extractEntry license
+188 silly gunzTarPerm extractEntry readme.md
+189 silly lockFile 5b37deb2-es-package-json-node-modules-got tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json/node_modules/got
+190 silly lockFile 5b37deb2-es-package-json-node-modules-got tar:///Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json/node_modules/got
+191 silly lockFile bea78d88--LiJin-npm-got-8-3-1-package-tgz tar:///Users/LiJin/.npm/got/8.3.1/package.tgz
+192 silly lockFile bea78d88--LiJin-npm-got-8-3-1-package-tgz tar:///Users/LiJin/.npm/got/8.3.1/package.tgz
+193 info preinstall got@8.3.1
+194 verbose readDependencies using package.json deps
+195 verbose readDependencies using package.json deps
+196 verbose cache add [ '@sindresorhus/is@^0.7.0', null ]
+197 verbose cache add name=undefined spec="@sindresorhus/is@^0.7.0" args=["@sindresorhus/is@^0.7.0",null]
+198 verbose parsed url { protocol: null,
+198 verbose parsed url   slashes: null,
+198 verbose parsed url   auth: null,
+198 verbose parsed url   host: null,
+198 verbose parsed url   port: null,
+198 verbose parsed url   hostname: null,
+198 verbose parsed url   hash: null,
+198 verbose parsed url   search: null,
+198 verbose parsed url   query: null,
+198 verbose parsed url   pathname: '@sindresorhus/is@^0.7.0',
+198 verbose parsed url   path: '@sindresorhus/is@^0.7.0',
+198 verbose parsed url   href: '@sindresorhus/is@^0.7.0' }
+199 verbose cache add [ 'cacheable-request@^2.1.1', null ]
+200 verbose cache add name=undefined spec="cacheable-request@^2.1.1" args=["cacheable-request@^2.1.1",null]
+201 verbose parsed url { protocol: null,
+201 verbose parsed url   slashes: null,
+201 verbose parsed url   auth: null,
+201 verbose parsed url   host: null,
+201 verbose parsed url   port: null,
+201 verbose parsed url   hostname: null,
+201 verbose parsed url   hash: null,
+201 verbose parsed url   search: null,
+201 verbose parsed url   query: null,
+201 verbose parsed url   pathname: 'cacheable-request@^2.1.1',
+201 verbose parsed url   path: 'cacheable-request@^2.1.1',
+201 verbose parsed url   href: 'cacheable-request@^2.1.1' }
+202 verbose cache add name="" spec="sindresorhus/is@^0.7.0" args=["","sindresorhus/is@^0.7.0"]
+203 verbose parsed url { protocol: null,
+203 verbose parsed url   slashes: null,
+203 verbose parsed url   auth: null,
+203 verbose parsed url   host: null,
+203 verbose parsed url   port: null,
+203 verbose parsed url   hostname: null,
+203 verbose parsed url   hash: null,
+203 verbose parsed url   search: null,
+203 verbose parsed url   query: null,
+203 verbose parsed url   pathname: 'sindresorhus/is@^0.7.0',
+203 verbose parsed url   path: 'sindresorhus/is@^0.7.0',
+203 verbose parsed url   href: 'sindresorhus/is@^0.7.0' }
+204 verbose cache add [ 'decompress-response@^3.3.0', null ]
+205 verbose cache add name=undefined spec="decompress-response@^3.3.0" args=["decompress-response@^3.3.0",null]
+206 verbose parsed url { protocol: null,
+206 verbose parsed url   slashes: null,
+206 verbose parsed url   auth: null,
+206 verbose parsed url   host: null,
+206 verbose parsed url   port: null,
+206 verbose parsed url   hostname: null,
+206 verbose parsed url   hash: null,
+206 verbose parsed url   search: null,
+206 verbose parsed url   query: null,
+206 verbose parsed url   pathname: 'decompress-response@^3.3.0',
+206 verbose parsed url   path: 'decompress-response@^3.3.0',
+206 verbose parsed url   href: 'decompress-response@^3.3.0' }
+207 verbose cache add name="cacheable-request" spec="^2.1.1" args=["cacheable-request","^2.1.1"]
+208 verbose parsed url { protocol: null,
+208 verbose parsed url   slashes: null,
+208 verbose parsed url   auth: null,
+208 verbose parsed url   host: null,
+208 verbose parsed url   port: null,
+208 verbose parsed url   hostname: null,
+208 verbose parsed url   hash: null,
+208 verbose parsed url   search: null,
+208 verbose parsed url   query: null,
+208 verbose parsed url   pathname: '^2.1.1',
+208 verbose parsed url   path: '^2.1.1',
+208 verbose parsed url   href: '^2.1.1' }
+209 verbose addNamed [ 'cacheable-request', '^2.1.1' ]
+210 verbose addNamed [ null, '>=2.1.1-0 <3.0.0-0' ]
+211 silly lockFile 3f99b4ec-cacheable-request-2-1-1 cacheable-request@^2.1.1
+212 verbose lock cacheable-request@^2.1.1 /Users/LiJin/.npm/3f99b4ec-cacheable-request-2-1-1.lock
+213 verbose cache add name="sindresorhus/is" spec="^0.7.0" args=["sindresorhus/is","^0.7.0"]
+214 verbose parsed url { protocol: null,
+214 verbose parsed url   slashes: null,
+214 verbose parsed url   auth: null,
+214 verbose parsed url   host: null,
+214 verbose parsed url   port: null,
+214 verbose parsed url   hostname: null,
+214 verbose parsed url   hash: null,
+214 verbose parsed url   search: null,
+214 verbose parsed url   query: null,
+214 verbose parsed url   pathname: '^0.7.0',
+214 verbose parsed url   path: '^0.7.0',
+214 verbose parsed url   href: '^0.7.0' }
+215 verbose addNamed [ 'sindresorhus/is', '^0.7.0' ]
+216 verbose addNamed [ null, '>=0.7.0-0 <0.8.0-0' ]
+217 silly lockFile c89f2584-sindresorhus-is-0-7-0 sindresorhus/is@^0.7.0
+218 verbose lock sindresorhus/is@^0.7.0 /Users/LiJin/.npm/c89f2584-sindresorhus-is-0-7-0.lock
+219 verbose cache add [ 'isurl@^1.0.0-alpha5', null ]
+220 verbose cache add name=undefined spec="isurl@^1.0.0-alpha5" args=["isurl@^1.0.0-alpha5",null]
+221 verbose parsed url { protocol: null,
+221 verbose parsed url   slashes: null,
+221 verbose parsed url   auth: null,
+221 verbose parsed url   host: null,
+221 verbose parsed url   port: null,
+221 verbose parsed url   hostname: null,
+221 verbose parsed url   hash: null,
+221 verbose parsed url   search: null,
+221 verbose parsed url   query: null,
+221 verbose parsed url   pathname: 'isurl@^1.0.0-alpha5',
+221 verbose parsed url   path: 'isurl@^1.0.0-alpha5',
+221 verbose parsed url   href: 'isurl@^1.0.0-alpha5' }
+222 verbose cache add [ 'into-stream@^3.1.0', null ]
+223 verbose cache add name=undefined spec="into-stream@^3.1.0" args=["into-stream@^3.1.0",null]
+224 verbose parsed url { protocol: null,
+224 verbose parsed url   slashes: null,
+224 verbose parsed url   auth: null,
+224 verbose parsed url   host: null,
+224 verbose parsed url   port: null,
+224 verbose parsed url   hostname: null,
+224 verbose parsed url   hash: null,
+224 verbose parsed url   search: null,
+224 verbose parsed url   query: null,
+224 verbose parsed url   pathname: 'into-stream@^3.1.0',
+224 verbose parsed url   path: 'into-stream@^3.1.0',
+224 verbose parsed url   href: 'into-stream@^3.1.0' }
+225 verbose cache add [ 'mimic-response@^1.0.0', null ]
+226 verbose cache add name=undefined spec="mimic-response@^1.0.0" args=["mimic-response@^1.0.0",null]
+227 verbose parsed url { protocol: null,
+227 verbose parsed url   slashes: null,
+227 verbose parsed url   auth: null,
+227 verbose parsed url   host: null,
+227 verbose parsed url   port: null,
+227 verbose parsed url   hostname: null,
+227 verbose parsed url   hash: null,
+227 verbose parsed url   search: null,
+227 verbose parsed url   query: null,
+227 verbose parsed url   pathname: 'mimic-response@^1.0.0',
+227 verbose parsed url   path: 'mimic-response@^1.0.0',
+227 verbose parsed url   href: 'mimic-response@^1.0.0' }
+228 verbose cache add [ 'p-cancelable@^0.4.0', null ]
+229 verbose cache add name=undefined spec="p-cancelable@^0.4.0" args=["p-cancelable@^0.4.0",null]
+230 verbose parsed url { protocol: null,
+230 verbose parsed url   slashes: null,
+230 verbose parsed url   auth: null,
+230 verbose parsed url   host: null,
+230 verbose parsed url   port: null,
+230 verbose parsed url   hostname: null,
+230 verbose parsed url   hash: null,
+230 verbose parsed url   search: null,
+230 verbose parsed url   query: null,
+230 verbose parsed url   pathname: 'p-cancelable@^0.4.0',
+230 verbose parsed url   path: 'p-cancelable@^0.4.0',
+230 verbose parsed url   href: 'p-cancelable@^0.4.0' }
+231 verbose cache add [ 'p-timeout@^2.0.1', null ]
+232 verbose cache add name=undefined spec="p-timeout@^2.0.1" args=["p-timeout@^2.0.1",null]
+233 verbose parsed url { protocol: null,
+233 verbose parsed url   slashes: null,
+233 verbose parsed url   auth: null,
+233 verbose parsed url   host: null,
+233 verbose parsed url   port: null,
+233 verbose parsed url   hostname: null,
+233 verbose parsed url   hash: null,
+233 verbose parsed url   search: null,
+233 verbose parsed url   query: null,
+233 verbose parsed url   pathname: 'p-timeout@^2.0.1',
+233 verbose parsed url   path: 'p-timeout@^2.0.1',
+233 verbose parsed url   href: 'p-timeout@^2.0.1' }
+234 verbose cache add [ 'url-parse-lax@^3.0.0', null ]
+235 verbose cache add name=undefined spec="url-parse-lax@^3.0.0" args=["url-parse-lax@^3.0.0",null]
+236 verbose parsed url { protocol: null,
+236 verbose parsed url   slashes: null,
+236 verbose parsed url   auth: null,
+236 verbose parsed url   host: null,
+236 verbose parsed url   port: null,
+236 verbose parsed url   hostname: null,
+236 verbose parsed url   hash: null,
+236 verbose parsed url   search: null,
+236 verbose parsed url   query: null,
+236 verbose parsed url   pathname: 'url-parse-lax@^3.0.0',
+236 verbose parsed url   path: 'url-parse-lax@^3.0.0',
+236 verbose parsed url   href: 'url-parse-lax@^3.0.0' }
+237 verbose cache add [ 'url-to-options@^1.0.1', null ]
+238 verbose cache add name=undefined spec="url-to-options@^1.0.1" args=["url-to-options@^1.0.1",null]
+239 verbose parsed url { protocol: null,
+239 verbose parsed url   slashes: null,
+239 verbose parsed url   auth: null,
+239 verbose parsed url   host: null,
+239 verbose parsed url   port: null,
+239 verbose parsed url   hostname: null,
+239 verbose parsed url   hash: null,
+239 verbose parsed url   search: null,
+239 verbose parsed url   query: null,
+239 verbose parsed url   pathname: 'url-to-options@^1.0.1',
+239 verbose parsed url   path: 'url-to-options@^1.0.1',
+239 verbose parsed url   href: 'url-to-options@^1.0.1' }
+240 verbose cache add name="decompress-response" spec="^3.3.0" args=["decompress-response","^3.3.0"]
+241 verbose parsed url { protocol: null,
+241 verbose parsed url   slashes: null,
+241 verbose parsed url   auth: null,
+241 verbose parsed url   host: null,
+241 verbose parsed url   port: null,
+241 verbose parsed url   hostname: null,
+241 verbose parsed url   hash: null,
+241 verbose parsed url   search: null,
+241 verbose parsed url   query: null,
+241 verbose parsed url   pathname: '^3.3.0',
+241 verbose parsed url   path: '^3.3.0',
+241 verbose parsed url   href: '^3.3.0' }
+242 verbose addNamed [ 'decompress-response', '^3.3.0' ]
+243 verbose addNamed [ null, '>=3.3.0-0 <4.0.0-0' ]
+244 silly lockFile e37aba44-decompress-response-3-3-0 decompress-response@^3.3.0
+245 verbose lock decompress-response@^3.3.0 /Users/LiJin/.npm/e37aba44-decompress-response-3-3-0.lock
+246 verbose cache add name="isurl" spec="^1.0.0-alpha5" args=["isurl","^1.0.0-alpha5"]
+247 verbose parsed url { protocol: null,
+247 verbose parsed url   slashes: null,
+247 verbose parsed url   auth: null,
+247 verbose parsed url   host: null,
+247 verbose parsed url   port: null,
+247 verbose parsed url   hostname: null,
+247 verbose parsed url   hash: null,
+247 verbose parsed url   search: null,
+247 verbose parsed url   query: null,
+247 verbose parsed url   pathname: '^1.0.0-alpha5',
+247 verbose parsed url   path: '^1.0.0-alpha5',
+247 verbose parsed url   href: '^1.0.0-alpha5' }
+248 verbose addNamed [ 'isurl', '^1.0.0-alpha5' ]
+249 verbose addNamed [ null, '>=1.0.0-alpha5 <2.0.0-0' ]
+250 silly lockFile 5e03e986-isurl-1-0-0-alpha5 isurl@^1.0.0-alpha5
+251 verbose lock isurl@^1.0.0-alpha5 /Users/LiJin/.npm/5e03e986-isurl-1-0-0-alpha5.lock
+252 verbose cache add name="into-stream" spec="^3.1.0" args=["into-stream","^3.1.0"]
+253 verbose parsed url { protocol: null,
+253 verbose parsed url   slashes: null,
+253 verbose parsed url   auth: null,
+253 verbose parsed url   host: null,
+253 verbose parsed url   port: null,
+253 verbose parsed url   hostname: null,
+253 verbose parsed url   hash: null,
+253 verbose parsed url   search: null,
+253 verbose parsed url   query: null,
+253 verbose parsed url   pathname: '^3.1.0',
+253 verbose parsed url   path: '^3.1.0',
+253 verbose parsed url   href: '^3.1.0' }
+254 verbose addNamed [ 'into-stream', '^3.1.0' ]
+255 verbose addNamed [ null, '>=3.1.0-0 <4.0.0-0' ]
+256 silly lockFile 92431fad-into-stream-3-1-0 into-stream@^3.1.0
+257 verbose lock into-stream@^3.1.0 /Users/LiJin/.npm/92431fad-into-stream-3-1-0.lock
+258 verbose cache add name="mimic-response" spec="^1.0.0" args=["mimic-response","^1.0.0"]
+259 verbose parsed url { protocol: null,
+259 verbose parsed url   slashes: null,
+259 verbose parsed url   auth: null,
+259 verbose parsed url   host: null,
+259 verbose parsed url   port: null,
+259 verbose parsed url   hostname: null,
+259 verbose parsed url   hash: null,
+259 verbose parsed url   search: null,
+259 verbose parsed url   query: null,
+259 verbose parsed url   pathname: '^1.0.0',
+259 verbose parsed url   path: '^1.0.0',
+259 verbose parsed url   href: '^1.0.0' }
+260 verbose addNamed [ 'mimic-response', '^1.0.0' ]
+261 verbose addNamed [ null, '>=1.0.0-0 <2.0.0-0' ]
+262 silly lockFile 4a2ecbbf-mimic-response-1-0-0 mimic-response@^1.0.0
+263 verbose lock mimic-response@^1.0.0 /Users/LiJin/.npm/4a2ecbbf-mimic-response-1-0-0.lock
+264 verbose cache add name="p-cancelable" spec="^0.4.0" args=["p-cancelable","^0.4.0"]
+265 verbose parsed url { protocol: null,
+265 verbose parsed url   slashes: null,
+265 verbose parsed url   auth: null,
+265 verbose parsed url   host: null,
+265 verbose parsed url   port: null,
+265 verbose parsed url   hostname: null,
+265 verbose parsed url   hash: null,
+265 verbose parsed url   search: null,
+265 verbose parsed url   query: null,
+265 verbose parsed url   pathname: '^0.4.0',
+265 verbose parsed url   path: '^0.4.0',
+265 verbose parsed url   href: '^0.4.0' }
+266 verbose addNamed [ 'p-cancelable', '^0.4.0' ]
+267 verbose addNamed [ null, '>=0.4.0-0 <0.5.0-0' ]
+268 silly lockFile 773482fc-p-cancelable-0-4-0 p-cancelable@^0.4.0
+269 verbose lock p-cancelable@^0.4.0 /Users/LiJin/.npm/773482fc-p-cancelable-0-4-0.lock
+270 verbose cache add name="p-timeout" spec="^2.0.1" args=["p-timeout","^2.0.1"]
+271 verbose parsed url { protocol: null,
+271 verbose parsed url   slashes: null,
+271 verbose parsed url   auth: null,
+271 verbose parsed url   host: null,
+271 verbose parsed url   port: null,
+271 verbose parsed url   hostname: null,
+271 verbose parsed url   hash: null,
+271 verbose parsed url   search: null,
+271 verbose parsed url   query: null,
+271 verbose parsed url   pathname: '^2.0.1',
+271 verbose parsed url   path: '^2.0.1',
+271 verbose parsed url   href: '^2.0.1' }
+272 verbose addNamed [ 'p-timeout', '^2.0.1' ]
+273 verbose addNamed [ null, '>=2.0.1-0 <3.0.0-0' ]
+274 silly lockFile 42137c7c-p-timeout-2-0-1 p-timeout@^2.0.1
+275 verbose lock p-timeout@^2.0.1 /Users/LiJin/.npm/42137c7c-p-timeout-2-0-1.lock
+276 verbose cache add name="url-parse-lax" spec="^3.0.0" args=["url-parse-lax","^3.0.0"]
+277 verbose parsed url { protocol: null,
+277 verbose parsed url   slashes: null,
+277 verbose parsed url   auth: null,
+277 verbose parsed url   host: null,
+277 verbose parsed url   port: null,
+277 verbose parsed url   hostname: null,
+277 verbose parsed url   hash: null,
+277 verbose parsed url   search: null,
+277 verbose parsed url   query: null,
+277 verbose parsed url   pathname: '^3.0.0',
+277 verbose parsed url   path: '^3.0.0',
+277 verbose parsed url   href: '^3.0.0' }
+278 verbose addNamed [ 'url-parse-lax', '^3.0.0' ]
+279 verbose addNamed [ null, '>=3.0.0-0 <4.0.0-0' ]
+280 silly lockFile d67ef161-url-parse-lax-3-0-0 url-parse-lax@^3.0.0
+281 verbose lock url-parse-lax@^3.0.0 /Users/LiJin/.npm/d67ef161-url-parse-lax-3-0-0.lock
+282 verbose cache add name="url-to-options" spec="^1.0.1" args=["url-to-options","^1.0.1"]
+283 verbose parsed url { protocol: null,
+283 verbose parsed url   slashes: null,
+283 verbose parsed url   auth: null,
+283 verbose parsed url   host: null,
+283 verbose parsed url   port: null,
+283 verbose parsed url   hostname: null,
+283 verbose parsed url   hash: null,
+283 verbose parsed url   search: null,
+283 verbose parsed url   query: null,
+283 verbose parsed url   pathname: '^1.0.1',
+283 verbose parsed url   path: '^1.0.1',
+283 verbose parsed url   href: '^1.0.1' }
+284 verbose addNamed [ 'url-to-options', '^1.0.1' ]
+285 verbose addNamed [ null, '>=1.0.1-0 <2.0.0-0' ]
+286 silly lockFile e59521ff-url-to-options-1-0-1 url-to-options@^1.0.1
+287 verbose lock url-to-options@^1.0.1 /Users/LiJin/.npm/e59521ff-url-to-options-1-0-1.lock
+288 silly addNameRange { name: 'cacheable-request',
+288 silly addNameRange   range: '>=2.1.1-0 <3.0.0-0',
+288 silly addNameRange   hasData: false }
+289 silly addNameRange { name: 'sindresorhus/is',
+289 silly addNameRange   range: '>=0.7.0-0 <0.8.0-0',
+289 silly addNameRange   hasData: false }
+290 verbose url raw cacheable-request
+291 verbose url resolving [ 'https://registry.npmjs.org/', './cacheable-request' ]
+292 verbose url resolved https://registry.npmjs.org/cacheable-request
+293 info trying registry request attempt 1 at 19:49:09
+294 http GET https://registry.npmjs.org/cacheable-request
+295 silly addNameRange { name: 'decompress-response',
+295 silly addNameRange   range: '>=3.3.0-0 <4.0.0-0',
+295 silly addNameRange   hasData: false }
+296 verbose url raw sindresorhus/is
+297 verbose url resolving [ 'https://registry.npmjs.org/', './sindresorhus/is' ]
+298 verbose url resolved https://registry.npmjs.org/sindresorhus/is
+299 info trying registry request attempt 1 at 19:49:09
+300 http GET https://registry.npmjs.org/sindresorhus/is
+301 silly addNameRange { name: 'isurl',
+301 silly addNameRange   range: '>=1.0.0-alpha5 <2.0.0-0',
+301 silly addNameRange   hasData: false }
+302 silly addNameRange { name: 'into-stream',
+302 silly addNameRange   range: '>=3.1.0-0 <4.0.0-0',
+302 silly addNameRange   hasData: false }
+303 silly addNameRange { name: 'mimic-response',
+303 silly addNameRange   range: '>=1.0.0-0 <2.0.0-0',
+303 silly addNameRange   hasData: false }
+304 silly addNameRange { name: 'p-timeout',
+304 silly addNameRange   range: '>=2.0.1-0 <3.0.0-0',
+304 silly addNameRange   hasData: false }
+305 silly addNameRange { name: 'p-cancelable',
+305 silly addNameRange   range: '>=0.4.0-0 <0.5.0-0',
+305 silly addNameRange   hasData: false }
+306 silly addNameRange { name: 'url-parse-lax',
+306 silly addNameRange   range: '>=3.0.0-0 <4.0.0-0',
+306 silly addNameRange   hasData: false }
+307 silly addNameRange { name: 'url-to-options',
+307 silly addNameRange   range: '>=1.0.1-0 <2.0.0-0',
+307 silly addNameRange   hasData: false }
+308 verbose url raw decompress-response
+309 verbose url resolving [ 'https://registry.npmjs.org/', './decompress-response' ]
+310 verbose url resolved https://registry.npmjs.org/decompress-response
+311 info trying registry request attempt 1 at 19:49:09
+312 http GET https://registry.npmjs.org/decompress-response
+313 verbose url raw isurl
+314 verbose url resolving [ 'https://registry.npmjs.org/', './isurl' ]
+315 verbose url resolved https://registry.npmjs.org/isurl
+316 info trying registry request attempt 1 at 19:49:09
+317 http GET https://registry.npmjs.org/isurl
+318 verbose url raw into-stream
+319 verbose url resolving [ 'https://registry.npmjs.org/', './into-stream' ]
+320 verbose url resolved https://registry.npmjs.org/into-stream
+321 info trying registry request attempt 1 at 19:49:09
+322 http GET https://registry.npmjs.org/into-stream
+323 verbose url raw mimic-response
+324 verbose url resolving [ 'https://registry.npmjs.org/', './mimic-response' ]
+325 verbose url resolved https://registry.npmjs.org/mimic-response
+326 info trying registry request attempt 1 at 19:49:09
+327 http GET https://registry.npmjs.org/mimic-response
+328 verbose url raw p-timeout
+329 verbose url resolving [ 'https://registry.npmjs.org/', './p-timeout' ]
+330 verbose url resolved https://registry.npmjs.org/p-timeout
+331 info trying registry request attempt 1 at 19:49:09
+332 http GET https://registry.npmjs.org/p-timeout
+333 verbose url raw p-cancelable
+334 verbose url resolving [ 'https://registry.npmjs.org/', './p-cancelable' ]
+335 verbose url resolved https://registry.npmjs.org/p-cancelable
+336 info trying registry request attempt 1 at 19:49:09
+337 http GET https://registry.npmjs.org/p-cancelable
+338 verbose url raw url-parse-lax
+339 verbose url resolving [ 'https://registry.npmjs.org/', './url-parse-lax' ]
+340 verbose url resolved https://registry.npmjs.org/url-parse-lax
+341 info trying registry request attempt 1 at 19:49:09
+342 http GET https://registry.npmjs.org/url-parse-lax
+343 verbose url raw url-to-options
+344 verbose url resolving [ 'https://registry.npmjs.org/', './url-to-options' ]
+345 verbose url resolved https://registry.npmjs.org/url-to-options
+346 info trying registry request attempt 1 at 19:49:09
+347 http GET https://registry.npmjs.org/url-to-options
+348 http 200 https://registry.npmjs.org/into-stream
+349 silly registry.get cb [ 200,
+349 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+349 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+349 silly registry.get     'transfer-encoding': 'chunked',
+349 silly registry.get     connection: 'keep-alive',
+349 silly registry.get     'set-cookie': [ '__cfduid=d930610c9fe4f5b37a58b93271ccb98041529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+349 silly registry.get     'cache-control': 'max-age=300',
+349 silly registry.get     'cf-cache-status': 'HIT',
+349 silly registry.get     'cf-ray': '42f2f404095d714f-ORD',
+349 silly registry.get     etag: 'W/"dc0ccfc5a52319dafac18723b1b1a4e0"',
+349 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+349 silly registry.get     'last-modified': 'Sat, 26 May 2018 12:41:15 GMT',
+349 silly registry.get     vary: 'accept-encoding, accept',
+349 silly registry.get     server: 'cloudflare',
+349 silly registry.get     'content-encoding': 'gzip' } ]
+350 silly addNameRange number 2 { name: 'into-stream',
+350 silly addNameRange   range: '>=3.1.0-0 <4.0.0-0',
+350 silly addNameRange   hasData: true }
+351 silly addNameRange versions [ 'into-stream',
+351 silly addNameRange   [ '1.0.0', '2.0.0', '2.0.1', '3.0.0', '3.1.0' ] ]
+352 verbose addNamed [ 'into-stream', '3.1.0' ]
+353 verbose addNamed [ '3.1.0', '3.1.0' ]
+354 silly lockFile 48b3584c-into-stream-3-1-0 into-stream@3.1.0
+355 verbose lock into-stream@3.1.0 /Users/LiJin/.npm/48b3584c-into-stream-3-1-0.lock
+356 silly lockFile 6e610fe9-nto-stream-into-stream-3-1-0-tgz https://registry.npmjs.org/into-stream/-/into-stream-3.1.0.tgz
+357 verbose lock https://registry.npmjs.org/into-stream/-/into-stream-3.1.0.tgz /Users/LiJin/.npm/6e610fe9-nto-stream-into-stream-3-1-0-tgz.lock
+358 verbose addRemoteTarball [ 'https://registry.npmjs.org/into-stream/-/into-stream-3.1.0.tgz',
+358 verbose addRemoteTarball   '96fb0a936c12babd6ff1752a17d05616abd094c6' ]
+359 info retry fetch attempt 1 at 19:49:09
+360 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/into-stream/-/into-stream-3.1.0.tgz
+361 http GET https://registry.npmjs.org/into-stream/-/into-stream-3.1.0.tgz
+362 http 200 https://registry.npmjs.org/cacheable-request
+363 silly registry.get cb [ 200,
+363 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+363 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+363 silly registry.get     'transfer-encoding': 'chunked',
+363 silly registry.get     connection: 'keep-alive',
+363 silly registry.get     'set-cookie': [ '__cfduid=de005ad62409e0be2e334034b5f27321b1529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+363 silly registry.get     'cache-control': 'max-age=300',
+363 silly registry.get     'cf-cache-status': 'HIT',
+363 silly registry.get     'cf-ray': '42f2f4041e9e55ac-ORD',
+363 silly registry.get     etag: 'W/"18786ec49b58db336233f84b0517a81d"',
+363 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+363 silly registry.get     'last-modified': 'Sat, 26 May 2018 19:15:58 GMT',
+363 silly registry.get     vary: 'accept-encoding, accept',
+363 silly registry.get     server: 'cloudflare',
+363 silly registry.get     'content-encoding': 'gzip' } ]
+364 http 200 https://registry.npmjs.org/mimic-response
+365 silly registry.get cb [ 200,
+365 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+365 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+365 silly registry.get     'transfer-encoding': 'chunked',
+365 silly registry.get     connection: 'keep-alive',
+365 silly registry.get     'set-cookie': [ '__cfduid=d930610c9fe4f5b37a58b93271ccb98041529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+365 silly registry.get     'cache-control': 'max-age=300',
+365 silly registry.get     'cf-cache-status': 'HIT',
+365 silly registry.get     'cf-ray': '42f2f4043989714f-ORD',
+365 silly registry.get     etag: 'W/"57f4cdea98cbeb0f372f5659bdf7a107"',
+365 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+365 silly registry.get     'last-modified': 'Sun, 27 May 2018 08:04:35 GMT',
+365 silly registry.get     vary: 'accept-encoding, accept',
+365 silly registry.get     server: 'cloudflare',
+365 silly registry.get     'content-encoding': 'gzip' } ]
+366 http 200 https://registry.npmjs.org/isurl
+367 silly registry.get cb [ 200,
+367 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+367 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+367 silly registry.get     'transfer-encoding': 'chunked',
+367 silly registry.get     connection: 'keep-alive',
+367 silly registry.get     'set-cookie': [ '__cfduid=d0a2ee6121e75a70b71469a84ba751ee81529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+367 silly registry.get     'cache-control': 'max-age=300',
+367 silly registry.get     'cf-cache-status': 'HIT',
+367 silly registry.get     'cf-ray': '42f2f4041e357131-ORD',
+367 silly registry.get     etag: 'W/"602dd0b91e4f7962d61258a245a729d3"',
+367 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+367 silly registry.get     'last-modified': 'Sun, 27 May 2018 05:02:53 GMT',
+367 silly registry.get     vary: 'accept-encoding, accept',
+367 silly registry.get     server: 'cloudflare',
+367 silly registry.get     'content-encoding': 'gzip' } ]
+368 silly addNameRange number 2 { name: 'cacheable-request',
+368 silly addNameRange   range: '>=2.1.1-0 <3.0.0-0',
+368 silly addNameRange   hasData: true }
+369 silly addNameRange versions [ 'cacheable-request',
+369 silly addNameRange   [ '0.0.0',
+369 silly addNameRange     '0.1.0',
+369 silly addNameRange     '0.2.0',
+369 silly addNameRange     '0.3.0',
+369 silly addNameRange     '0.4.0',
+369 silly addNameRange     '0.5.0',
+369 silly addNameRange     '1.0.0',
+369 silly addNameRange     '1.0.1',
+369 silly addNameRange     '1.0.2',
+369 silly addNameRange     '1.1.0',
+369 silly addNameRange     '1.1.1',
+369 silly addNameRange     '1.1.2',
+369 silly addNameRange     '1.1.3',
+369 silly addNameRange     '2.0.0',
+369 silly addNameRange     '2.0.1',
+369 silly addNameRange     '2.1.0',
+369 silly addNameRange     '2.1.1',
+369 silly addNameRange     '2.1.2',
+369 silly addNameRange     '2.1.3',
+369 silly addNameRange     '2.1.4' ] ]
+370 verbose addNamed [ 'cacheable-request', '2.1.4' ]
+371 verbose addNamed [ '2.1.4', '2.1.4' ]
+372 silly lockFile fb47f139-cacheable-request-2-1-4 cacheable-request@2.1.4
+373 verbose lock cacheable-request@2.1.4 /Users/LiJin/.npm/fb47f139-cacheable-request-2-1-4.lock
+374 silly addNameRange number 2 { name: 'mimic-response',
+374 silly addNameRange   range: '>=1.0.0-0 <2.0.0-0',
+374 silly addNameRange   hasData: true }
+375 silly addNameRange versions [ 'mimic-response', [ '1.0.0' ] ]
+376 verbose addNamed [ 'mimic-response', '1.0.0' ]
+377 verbose addNamed [ '1.0.0', '1.0.0' ]
+378 silly lockFile 61fa3d45-mimic-response-1-0-0 mimic-response@1.0.0
+379 verbose lock mimic-response@1.0.0 /Users/LiJin/.npm/61fa3d45-mimic-response-1-0-0.lock
+380 silly lockFile 3dcda8b3-uest-cacheable-request-2-1-4-tgz https://registry.npmjs.org/cacheable-request/-/cacheable-request-2.1.4.tgz
+381 verbose lock https://registry.npmjs.org/cacheable-request/-/cacheable-request-2.1.4.tgz /Users/LiJin/.npm/3dcda8b3-uest-cacheable-request-2-1-4-tgz.lock
+382 silly lockFile eeaafd22-esponse-mimic-response-1-0-0-tgz https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.0.tgz
+383 verbose lock https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.0.tgz /Users/LiJin/.npm/eeaafd22-esponse-mimic-response-1-0-0-tgz.lock
+384 silly addNameRange number 2 { name: 'isurl',
+384 silly addNameRange   range: '>=1.0.0-alpha5 <2.0.0-0',
+384 silly addNameRange   hasData: true }
+385 silly addNameRange versions [ 'isurl',
+385 silly addNameRange   [ '1.0.0-alpha',
+385 silly addNameRange     '1.0.0-alpha2',
+385 silly addNameRange     '1.0.0-alpha3',
+385 silly addNameRange     '1.0.0-alpha4',
+385 silly addNameRange     '1.0.0-alpha5',
+385 silly addNameRange     '1.0.0-alpha6',
+385 silly addNameRange     '1.0.0' ] ]
+386 verbose addNamed [ 'isurl', '1.0.0' ]
+387 verbose addNamed [ '1.0.0', '1.0.0' ]
+388 silly lockFile 94977b5b-isurl-1-0-0 isurl@1.0.0
+389 verbose lock isurl@1.0.0 /Users/LiJin/.npm/94977b5b-isurl-1-0-0.lock
+390 verbose addRemoteTarball [ 'https://registry.npmjs.org/cacheable-request/-/cacheable-request-2.1.4.tgz',
+390 verbose addRemoteTarball   '0d808801b6342ad33c91df9d0b44dc09b91e5c3d' ]
+391 verbose addRemoteTarball [ 'https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.0.tgz',
+391 verbose addRemoteTarball   'df3d3652a73fded6b9b0b24146e6fd052353458e' ]
+392 silly lockFile 5f40a45a--npmjs-org-isurl-isurl-1-0-0-tgz https://registry.npmjs.org/isurl/-/isurl-1.0.0.tgz
+393 verbose lock https://registry.npmjs.org/isurl/-/isurl-1.0.0.tgz /Users/LiJin/.npm/5f40a45a--npmjs-org-isurl-isurl-1-0-0-tgz.lock
+394 info retry fetch attempt 1 at 19:49:09
+395 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/cacheable-request/-/cacheable-request-2.1.4.tgz
+396 info retry fetch attempt 1 at 19:49:09
+397 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/mimic-response/-/mimic-response-1.0.0.tgz
+398 http GET https://registry.npmjs.org/cacheable-request/-/cacheable-request-2.1.4.tgz
+399 verbose addRemoteTarball [ 'https://registry.npmjs.org/isurl/-/isurl-1.0.0.tgz',
+399 verbose addRemoteTarball   'b27f4f49f3cdaa3ea44a0a5b7f3462e6edc39d67' ]
+400 http GET https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.0.tgz
+401 http 200 https://registry.npmjs.org/p-timeout
+402 silly registry.get cb [ 200,
+402 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+402 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+402 silly registry.get     'transfer-encoding': 'chunked',
+402 silly registry.get     connection: 'keep-alive',
+402 silly registry.get     'set-cookie': [ '__cfduid=de005ad62409e0be2e334034b5f27321b1529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+402 silly registry.get     'cache-control': 'max-age=300',
+402 silly registry.get     'cf-cache-status': 'HIT',
+402 silly registry.get     'cf-ray': '42f2f4043ec855ac-ORD',
+402 silly registry.get     etag: 'W/"27f74ba65f7e8a2c792eafae2cd2a756"',
+402 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+402 silly registry.get     'last-modified': 'Sun, 27 May 2018 11:40:47 GMT',
+402 silly registry.get     vary: 'accept-encoding, accept',
+402 silly registry.get     server: 'cloudflare',
+402 silly registry.get     'content-encoding': 'gzip' } ]
+403 info retry fetch attempt 1 at 19:49:09
+404 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/isurl/-/isurl-1.0.0.tgz
+405 http 200 https://registry.npmjs.org/p-cancelable
+406 silly registry.get cb [ 200,
+406 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+406 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+406 silly registry.get     'transfer-encoding': 'chunked',
+406 silly registry.get     connection: 'keep-alive',
+406 silly registry.get     'set-cookie': [ '__cfduid=d930610c9fe4f5b37a58b93271ccb98041529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+406 silly registry.get     'cache-control': 'max-age=300',
+406 silly registry.get     'cf-cache-status': 'HIT',
+406 silly registry.get     'cf-ray': '42f2f404499c714f-ORD',
+406 silly registry.get     etag: 'W/"62c5d5beb4ffb48e7fcf71d5d6364a3f"',
+406 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+406 silly registry.get     'last-modified': 'Sun, 27 May 2018 11:40:36 GMT',
+406 silly registry.get     vary: 'accept-encoding, accept',
+406 silly registry.get     server: 'cloudflare',
+406 silly registry.get     'content-encoding': 'gzip' } ]
+407 http GET https://registry.npmjs.org/isurl/-/isurl-1.0.0.tgz
+408 http 200 https://registry.npmjs.org/url-parse-lax
+409 silly registry.get cb [ 200,
+409 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+409 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+409 silly registry.get     'transfer-encoding': 'chunked',
+409 silly registry.get     connection: 'keep-alive',
+409 silly registry.get     'set-cookie': [ '__cfduid=d0a2ee6121e75a70b71469a84ba751ee81529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+409 silly registry.get     'cache-control': 'max-age=300',
+409 silly registry.get     'cf-cache-status': 'HIT',
+409 silly registry.get     'cf-ray': '42f2f4044e6c7131-ORD',
+409 silly registry.get     etag: 'W/"e01ec6a89aa1d51cdea6d3b181092db4"',
+409 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+409 silly registry.get     'last-modified': 'Sun, 27 May 2018 20:34:13 GMT',
+409 silly registry.get     vary: 'accept-encoding, accept',
+409 silly registry.get     server: 'cloudflare',
+409 silly registry.get     'content-encoding': 'gzip' } ]
+410 silly addNameRange number 2 { name: 'p-timeout', range: '>=2.0.1-0 <3.0.0-0', hasData: true }
+411 silly addNameRange versions [ 'p-timeout',
+411 silly addNameRange   [ '1.0.0', '1.1.0', '1.1.1', '1.2.0', '1.2.1', '2.0.0', '2.0.1' ] ]
+412 verbose addNamed [ 'p-timeout', '2.0.1' ]
+413 verbose addNamed [ '2.0.1', '2.0.1' ]
+414 silly lockFile ef47aedd-p-timeout-2-0-1 p-timeout@2.0.1
+415 verbose lock p-timeout@2.0.1 /Users/LiJin/.npm/ef47aedd-p-timeout-2-0-1.lock
+416 silly addNameRange number 2 { name: 'p-cancelable',
+416 silly addNameRange   range: '>=0.4.0-0 <0.5.0-0',
+416 silly addNameRange   hasData: true }
+417 silly addNameRange versions [ 'p-cancelable',
+417 silly addNameRange   [ '0.1.0', '0.2.0', '0.3.0', '0.4.0', '0.4.1' ] ]
+418 verbose addNamed [ 'p-cancelable', '0.4.1' ]
+419 verbose addNamed [ '0.4.1', '0.4.1' ]
+420 silly lockFile e2b1b720-p-cancelable-0-4-1 p-cancelable@0.4.1
+421 verbose lock p-cancelable@0.4.1 /Users/LiJin/.npm/e2b1b720-p-cancelable-0-4-1.lock
+422 silly lockFile e425e2f2-rg-p-timeout-p-timeout-2-0-1-tgz https://registry.npmjs.org/p-timeout/-/p-timeout-2.0.1.tgz
+423 verbose lock https://registry.npmjs.org/p-timeout/-/p-timeout-2.0.1.tgz /Users/LiJin/.npm/e425e2f2-rg-p-timeout-p-timeout-2-0-1-tgz.lock
+424 silly lockFile c0eb37da-ancelable-p-cancelable-0-4-1-tgz https://registry.npmjs.org/p-cancelable/-/p-cancelable-0.4.1.tgz
+425 verbose lock https://registry.npmjs.org/p-cancelable/-/p-cancelable-0.4.1.tgz /Users/LiJin/.npm/c0eb37da-ancelable-p-cancelable-0-4-1-tgz.lock
+426 verbose addRemoteTarball [ 'https://registry.npmjs.org/p-timeout/-/p-timeout-2.0.1.tgz',
+426 verbose addRemoteTarball   'd8dd1979595d2dc0139e1fe46b8b646cb3cdf038' ]
+427 verbose addRemoteTarball [ 'https://registry.npmjs.org/p-cancelable/-/p-cancelable-0.4.1.tgz',
+427 verbose addRemoteTarball   '35f363d67d52081c8d9585e37bcceb7e0bbcb2a0' ]
+428 silly addNameRange number 2 { name: 'url-parse-lax',
+428 silly addNameRange   range: '>=3.0.0-0 <4.0.0-0',
+428 silly addNameRange   hasData: true }
+429 silly addNameRange versions [ 'url-parse-lax', [ '1.0.0', '2.0.0', '3.0.0' ] ]
+430 verbose addNamed [ 'url-parse-lax', '3.0.0' ]
+431 verbose addNamed [ '3.0.0', '3.0.0' ]
+432 silly lockFile 23ef3aee-url-parse-lax-3-0-0 url-parse-lax@3.0.0
+433 verbose lock url-parse-lax@3.0.0 /Users/LiJin/.npm/23ef3aee-url-parse-lax-3-0-0.lock
+434 http 200 https://registry.npmjs.org/url-to-options
+435 silly registry.get cb [ 200,
+435 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+435 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+435 silly registry.get     'transfer-encoding': 'chunked',
+435 silly registry.get     connection: 'keep-alive',
+435 silly registry.get     'set-cookie': [ '__cfduid=de005ad62409e0be2e334034b5f27321b1529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+435 silly registry.get     'cache-control': 'max-age=300',
+435 silly registry.get     'cf-cache-status': 'HIT',
+435 silly registry.get     'cf-ray': '42f2f4045edc55ac-ORD',
+435 silly registry.get     etag: 'W/"a6da8c7dfbd4d6b9e7bfaebd13b22355"',
+435 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+435 silly registry.get     'last-modified': 'Sun, 27 May 2018 20:34:24 GMT',
+435 silly registry.get     vary: 'accept-encoding, accept',
+435 silly registry.get     server: 'cloudflare',
+435 silly registry.get     'content-encoding': 'gzip' } ]
+436 info retry fetch attempt 1 at 19:49:09
+437 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/p-timeout/-/p-timeout-2.0.1.tgz
+438 info retry fetch attempt 1 at 19:49:09
+439 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/p-cancelable/-/p-cancelable-0.4.1.tgz
+440 silly lockFile e989f4dd-arse-lax-url-parse-lax-3-0-0-tgz https://registry.npmjs.org/url-parse-lax/-/url-parse-lax-3.0.0.tgz
+441 verbose lock https://registry.npmjs.org/url-parse-lax/-/url-parse-lax-3.0.0.tgz /Users/LiJin/.npm/e989f4dd-arse-lax-url-parse-lax-3-0-0-tgz.lock
+442 http 200 https://registry.npmjs.org/decompress-response
+443 silly registry.get cb [ 200,
+443 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:09 GMT',
+443 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+443 silly registry.get     'transfer-encoding': 'chunked',
+443 silly registry.get     connection: 'keep-alive',
+443 silly registry.get     'set-cookie': [ '__cfduid=db6dfb22862d604be731233561d360d261529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+443 silly registry.get     'cache-control': 'max-age=300',
+443 silly registry.get     'cf-cache-status': 'HIT',
+443 silly registry.get     'cf-ray': '42f2f4041fd97125-ORD',
+443 silly registry.get     etag: 'W/"11d98fbf35a0097feb9bf3045131f36d"',
+443 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+443 silly registry.get     'last-modified': 'Sat, 26 May 2018 21:54:01 GMT',
+443 silly registry.get     vary: 'accept-encoding, accept',
+443 silly registry.get     server: 'cloudflare',
+443 silly registry.get     'content-encoding': 'gzip' } ]
+444 http GET https://registry.npmjs.org/p-timeout/-/p-timeout-2.0.1.tgz
+445 http GET https://registry.npmjs.org/p-cancelable/-/p-cancelable-0.4.1.tgz
+446 verbose addRemoteTarball [ 'https://registry.npmjs.org/url-parse-lax/-/url-parse-lax-3.0.0.tgz',
+446 verbose addRemoteTarball   '16b5cafc07dbe3676c1b1999177823d6503acb0c' ]
+447 silly addNameRange number 2 { name: 'url-to-options',
+447 silly addNameRange   range: '>=1.0.1-0 <2.0.0-0',
+447 silly addNameRange   hasData: true }
+448 silly addNameRange versions [ 'url-to-options', [ '1.0.0', '1.0.1' ] ]
+449 verbose addNamed [ 'url-to-options', '1.0.1' ]
+450 verbose addNamed [ '1.0.1', '1.0.1' ]
+451 silly lockFile 8cdfbf5b-url-to-options-1-0-1 url-to-options@1.0.1
+452 verbose lock url-to-options@1.0.1 /Users/LiJin/.npm/8cdfbf5b-url-to-options-1-0-1.lock
+453 info retry fetch attempt 1 at 19:49:09
+454 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/url-parse-lax/-/url-parse-lax-3.0.0.tgz
+455 http GET https://registry.npmjs.org/url-parse-lax/-/url-parse-lax-3.0.0.tgz
+456 silly lockFile ccc133e2-options-url-to-options-1-0-1-tgz https://registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz
+457 verbose lock https://registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz /Users/LiJin/.npm/ccc133e2-options-url-to-options-1-0-1-tgz.lock
+458 silly addNameRange number 2 { name: 'decompress-response',
+458 silly addNameRange   range: '>=3.3.0-0 <4.0.0-0',
+458 silly addNameRange   hasData: true }
+459 silly addNameRange versions [ 'decompress-response', [ '3.1.0', '3.2.0', '3.3.0' ] ]
+460 verbose addNamed [ 'decompress-response', '3.3.0' ]
+461 verbose addNamed [ '3.3.0', '3.3.0' ]
+462 silly lockFile 28b5f77c-decompress-response-3-3-0 decompress-response@3.3.0
+463 verbose lock decompress-response@3.3.0 /Users/LiJin/.npm/28b5f77c-decompress-response-3-3-0.lock
+464 verbose addRemoteTarball [ 'https://registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz',
+464 verbose addRemoteTarball   '1505a03a289a48cbd7a434efbaeec5055f5633a9' ]
+465 silly lockFile 67a7d94c-se-decompress-response-3-3-0-tgz https://registry.npmjs.org/decompress-response/-/decompress-response-3.3.0.tgz
+466 verbose lock https://registry.npmjs.org/decompress-response/-/decompress-response-3.3.0.tgz /Users/LiJin/.npm/67a7d94c-se-decompress-response-3-3-0-tgz.lock
+467 info retry fetch attempt 1 at 19:49:09
+468 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz
+469 verbose addRemoteTarball [ 'https://registry.npmjs.org/decompress-response/-/decompress-response-3.3.0.tgz',
+469 verbose addRemoteTarball   '80a4dd323748384bfa248083622aedec982adff3' ]
+470 http GET https://registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz
+471 info retry fetch attempt 1 at 19:49:09
+472 verbose fetch to= /var/folders/20/177z7j450gz8w5gf4d77llg40000gn/T/npm-56475-U5NHArL2/registry.npmjs.org/decompress-response/-/decompress-response-3.3.0.tgz
+473 http GET https://registry.npmjs.org/decompress-response/-/decompress-response-3.3.0.tgz
+474 http 200 https://registry.npmjs.org/cacheable-request/-/cacheable-request-2.1.4.tgz
+475 http 200 https://registry.npmjs.org/isurl/-/isurl-1.0.0.tgz
+476 http 200 https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.0.tgz
+477 silly lockFile 3dcda8b3-uest-cacheable-request-2-1-4-tgz https://registry.npmjs.org/cacheable-request/-/cacheable-request-2.1.4.tgz
+478 silly lockFile 3dcda8b3-uest-cacheable-request-2-1-4-tgz https://registry.npmjs.org/cacheable-request/-/cacheable-request-2.1.4.tgz
+479 silly lockFile 5f40a45a--npmjs-org-isurl-isurl-1-0-0-tgz https://registry.npmjs.org/isurl/-/isurl-1.0.0.tgz
+480 silly lockFile 5f40a45a--npmjs-org-isurl-isurl-1-0-0-tgz https://registry.npmjs.org/isurl/-/isurl-1.0.0.tgz
+481 silly lockFile eeaafd22-esponse-mimic-response-1-0-0-tgz https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.0.tgz
+482 silly lockFile eeaafd22-esponse-mimic-response-1-0-0-tgz https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.0.tgz
+483 silly lockFile fb47f139-cacheable-request-2-1-4 cacheable-request@2.1.4
+484 silly lockFile fb47f139-cacheable-request-2-1-4 cacheable-request@2.1.4
+485 silly lockFile 94977b5b-isurl-1-0-0 isurl@1.0.0
+486 silly lockFile 94977b5b-isurl-1-0-0 isurl@1.0.0
+487 silly lockFile 61fa3d45-mimic-response-1-0-0 mimic-response@1.0.0
+488 silly lockFile 61fa3d45-mimic-response-1-0-0 mimic-response@1.0.0
+489 silly lockFile 3f99b4ec-cacheable-request-2-1-1 cacheable-request@^2.1.1
+490 silly lockFile 3f99b4ec-cacheable-request-2-1-1 cacheable-request@^2.1.1
+491 silly lockFile 5e03e986-isurl-1-0-0-alpha5 isurl@^1.0.0-alpha5
+492 silly lockFile 5e03e986-isurl-1-0-0-alpha5 isurl@^1.0.0-alpha5
+493 silly lockFile 4a2ecbbf-mimic-response-1-0-0 mimic-response@^1.0.0
+494 silly lockFile 4a2ecbbf-mimic-response-1-0-0 mimic-response@^1.0.0
+495 http 200 https://registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz
+496 http 200 https://registry.npmjs.org/p-timeout/-/p-timeout-2.0.1.tgz
+497 silly lockFile e425e2f2-rg-p-timeout-p-timeout-2-0-1-tgz https://registry.npmjs.org/p-timeout/-/p-timeout-2.0.1.tgz
+498 silly lockFile e425e2f2-rg-p-timeout-p-timeout-2-0-1-tgz https://registry.npmjs.org/p-timeout/-/p-timeout-2.0.1.tgz
+499 silly lockFile ccc133e2-options-url-to-options-1-0-1-tgz https://registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz
+500 silly lockFile ccc133e2-options-url-to-options-1-0-1-tgz https://registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz
+501 silly lockFile ef47aedd-p-timeout-2-0-1 p-timeout@2.0.1
+502 silly lockFile ef47aedd-p-timeout-2-0-1 p-timeout@2.0.1
+503 silly lockFile 8cdfbf5b-url-to-options-1-0-1 url-to-options@1.0.1
+504 silly lockFile 8cdfbf5b-url-to-options-1-0-1 url-to-options@1.0.1
+505 silly lockFile 42137c7c-p-timeout-2-0-1 p-timeout@^2.0.1
+506 silly lockFile 42137c7c-p-timeout-2-0-1 p-timeout@^2.0.1
+507 silly lockFile e59521ff-url-to-options-1-0-1 url-to-options@^1.0.1
+508 silly lockFile e59521ff-url-to-options-1-0-1 url-to-options@^1.0.1
+509 http 200 https://registry.npmjs.org/url-parse-lax/-/url-parse-lax-3.0.0.tgz
+510 silly lockFile e989f4dd-arse-lax-url-parse-lax-3-0-0-tgz https://registry.npmjs.org/url-parse-lax/-/url-parse-lax-3.0.0.tgz
+511 silly lockFile e989f4dd-arse-lax-url-parse-lax-3-0-0-tgz https://registry.npmjs.org/url-parse-lax/-/url-parse-lax-3.0.0.tgz
+512 silly lockFile 23ef3aee-url-parse-lax-3-0-0 url-parse-lax@3.0.0
+513 silly lockFile 23ef3aee-url-parse-lax-3-0-0 url-parse-lax@3.0.0
+514 silly lockFile d67ef161-url-parse-lax-3-0-0 url-parse-lax@^3.0.0
+515 silly lockFile d67ef161-url-parse-lax-3-0-0 url-parse-lax@^3.0.0
+516 http 200 https://registry.npmjs.org/decompress-response/-/decompress-response-3.3.0.tgz
+517 http 200 https://registry.npmjs.org/into-stream/-/into-stream-3.1.0.tgz
+518 silly lockFile 67a7d94c-se-decompress-response-3-3-0-tgz https://registry.npmjs.org/decompress-response/-/decompress-response-3.3.0.tgz
+519 silly lockFile 67a7d94c-se-decompress-response-3-3-0-tgz https://registry.npmjs.org/decompress-response/-/decompress-response-3.3.0.tgz
+520 silly lockFile 28b5f77c-decompress-response-3-3-0 decompress-response@3.3.0
+521 silly lockFile 28b5f77c-decompress-response-3-3-0 decompress-response@3.3.0
+522 silly lockFile e37aba44-decompress-response-3-3-0 decompress-response@^3.3.0
+523 silly lockFile e37aba44-decompress-response-3-3-0 decompress-response@^3.3.0
+524 silly lockFile 6e610fe9-nto-stream-into-stream-3-1-0-tgz https://registry.npmjs.org/into-stream/-/into-stream-3.1.0.tgz
+525 silly lockFile 6e610fe9-nto-stream-into-stream-3-1-0-tgz https://registry.npmjs.org/into-stream/-/into-stream-3.1.0.tgz
+526 silly lockFile 48b3584c-into-stream-3-1-0 into-stream@3.1.0
+527 silly lockFile 48b3584c-into-stream-3-1-0 into-stream@3.1.0
+528 silly lockFile 92431fad-into-stream-3-1-0 into-stream@^3.1.0
+529 silly lockFile 92431fad-into-stream-3-1-0 into-stream@^3.1.0
+530 http 200 https://registry.npmjs.org/p-cancelable/-/p-cancelable-0.4.1.tgz
+531 silly lockFile c0eb37da-ancelable-p-cancelable-0-4-1-tgz https://registry.npmjs.org/p-cancelable/-/p-cancelable-0.4.1.tgz
+532 silly lockFile c0eb37da-ancelable-p-cancelable-0-4-1-tgz https://registry.npmjs.org/p-cancelable/-/p-cancelable-0.4.1.tgz
+533 silly lockFile e2b1b720-p-cancelable-0-4-1 p-cancelable@0.4.1
+534 silly lockFile e2b1b720-p-cancelable-0-4-1 p-cancelable@0.4.1
+535 silly lockFile 773482fc-p-cancelable-0-4-0 p-cancelable@^0.4.0
+536 silly lockFile 773482fc-p-cancelable-0-4-0 p-cancelable@^0.4.0
+537 http 405 https://registry.npmjs.org/sindresorhus/is
+538 silly registry.get cb [ 405,
+538 silly registry.get   { date: 'Sat, 23 Jun 2018 00:49:10 GMT',
+538 silly registry.get     'content-type': 'application/json',
+538 silly registry.get     'content-length': '63',
+538 silly registry.get     connection: 'keep-alive',
+538 silly registry.get     'set-cookie': [ '__cfduid=ddbb160b4c311027978d1d1102866c7fd1529714949; expires=Sun, 23-Jun-19 00:49:09 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+538 silly registry.get     allow: 'PUT',
+538 silly registry.get     'cf-ray': '42f2f4040d919ef9-ORD',
+538 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+538 silly registry.get     server: 'cloudflare' } ]
+539 silly lockFile c89f2584-sindresorhus-is-0-7-0 sindresorhus/is@^0.7.0
+540 silly lockFile c89f2584-sindresorhus-is-0-7-0 sindresorhus/is@^0.7.0
+541 verbose about to build /Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json/node_modules/got
+542 info /Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json/node_modules/got unbuild
+543 info preuninstall got@8.3.1
+544 info uninstall got@8.3.1
+545 verbose false,/Users/LiJin/projects/chichi/chichi/node_modules,/Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json/node_modules unbuild got@8.3.1
+546 info postuninstall got@8.3.1
+547 verbose about to build /Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json
+548 info /Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules/package-json unbuild
+549 info preuninstall package-json@5.0.0
+550 info uninstall package-json@5.0.0
+551 verbose false,/Users/LiJin/projects/chichi/chichi/node_modules,/Users/LiJin/projects/chichi/chichi/node_modules/latest-version/node_modules unbuild package-json@5.0.0
+552 info postuninstall package-json@5.0.0
+553 verbose about to build /Users/LiJin/projects/chichi/chichi/node_modules/latest-version
+554 info /Users/LiJin/projects/chichi/chichi/node_modules/latest-version unbuild
+555 info preuninstall latest-version@4.0.0
+556 info uninstall latest-version@4.0.0
+557 verbose true,/Users/LiJin/projects/chichi/chichi/node_modules,/Users/LiJin/projects/chichi/chichi/node_modules unbuild latest-version@4.0.0
+558 info postuninstall latest-version@4.0.0
+559 error Error: Method Not Allowed
+559 error     at errorResponse (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:257:10)
+559 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:200:12
+559 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:141:7)
+559 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:133:7
+559 error     at Object.oncomplete (fs.js:107:15)
+560 error If you need help, you may report this *entire* log,
+560 error including the npm and node versions, at:
+560 error     <http://github.com/npm/npm/issues>
+561 error System Darwin 17.6.0
+562 error command "node" "/usr/local/bin/npm" "install" "latest-version"
+563 error cwd /Users/LiJin/projects/chichi/chichi
+564 error node -v v0.10.29
+565 error npm -v 1.4.14
+566 error code E405
+567 verbose exit [ 1, true ]

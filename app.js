@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var hbs = require('hbs');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
@@ -11,7 +12,8 @@ require('dotenv').config();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-app.set('view options', { layout: 'layouts/layout' });
+app.set('view options', {layout: 'layouts/layout'});
+hbs.registerPartials(__dirname + '/views/layouts/partials');
 
 app.use(logger('dev'));
 app.use(express.json());
