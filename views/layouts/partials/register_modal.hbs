@@ -1,28 +1,64 @@
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
+<div id="register_modal_box" class="modal">
+  <span onclick="document.getElementById('register_modal_box').style.display='none'"
         class="close" title="Close Modal">&times;</span>
-
+    <div class="switcher">
+        <div class="sign_in_tab">
+            <a href="javascript:switchTabs('sign_in');" id="sign_up_modal_link" target="_self">Sign In</a>
+        </div>
+        <div class="sign_up_tab">
+            <a href="javascript:switchTabs('sign_up');" id="sign_up_modal_link" target="_self">Sign Up</a>
+        </div>
+    </div>
     <!-- Modal Content -->
-    <form class="modal-content animate" action="/action_page.php">
+    <form id="sign_in_form" class="modal-content animate" method="post" action="/action_page.php">
         <div class="imgcontainer">
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            <img src="/images/655_w_irving.jpg" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
 
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">Login</button>
+            <button type="submit">Sign In</button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="document.getElementById('register_modal_box').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+
+    <form id="sign_up_form" class="modal-content animate" action="/submit_signup" style="display: none;">
+        <div class="imgcontainer">
+            <img src="/images/655_w_irving.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="pswmatch"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pswmatch" required>
+
+            <button type="submit">Sign Up</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </form>
@@ -30,12 +66,40 @@
 
 <script>
     // Get the modal
-    var modal = document.getElementById('id01');
+    var modal = document.getElementById('register_modal_box');
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    };
+
+    $('button[type=submit]').on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $.ajax({
+            type: "POST",
+            url: '/submit_signup',
+            data: $( "#sign_up_form" ).serialize()
+        }).done(function(data){
+            $('body').append(data);
+        });
+    });
+
+    function switchTabs(action){
+        if(action == 'sign_in'){
+            $('#sign_in_form').show();
+            $('#sign_up_form').hide();
+        }
+        else if(action == 'sign_up'){
+            $('#sign_in_form').hide();
+            $('#sign_up_form').show();
+        }
+    }
+
+    function openRegisterModal(action){
+        document.getElementById('register_modal_box').style.display='block';
+        switchTabs(action);
     }
 </script>

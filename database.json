@@ -3,7 +3,7 @@
     "host": "localhost",
     "user": "root",
     "password" : "",
-    "database": "cheat_sheet",
+    "database": "building_board_dev",
     "driver": "mysql",
     "multipleStatements": true
   },
@@ -11,7 +11,7 @@
     "host": "localhost",
     "user": "root",
     "password" : "",
-    "database": "cheat_sheet_test",
+    "database": "building_board_test",
     "driver": "mysql",
     "multipleStatements": true
   }

@@ -4,7 +4,7 @@
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="/javascripts/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="/javascripts/modernizr.min.js"></script>
   </head>
   <body>
   	<div id="wrapper">
@@ -16,10 +16,10 @@
 			<nav id="nav" class="main-nav">
 				<ul id="menu-home" class="top-menu">
 					<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
-						<a href="javascript:void(0)" id="sign_up_modal_link" target="_self">Sign Up</a>
+						<a href="javascript:openRegisterModal('sign_up');" id="sign_up_modal_link" target="_self">Sign Up</a>
 					</li>
 					<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274">
-						<a href="javascript:void(0)" id="sign_in_modal_link" target="_self" onclick="document.getElementById('id01').style.display='block'">Sign In</a>
+						<a href="javascript:openRegisterModal('sign_in');" id="sign_in_modal_link" target="_self">Sign In</a>
 					</li>
 				</ul>
 			</nav>

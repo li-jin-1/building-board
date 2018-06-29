@@ -15,22 +15,11 @@ exports.setup = function(options, seedLink) {
 };
 
 exports.up = function(db) {
-  db.connection.query([
-      "CREATE TABLE members(",
-      "id INT NOT NULL AUTO_INCREMENT,",
-      "username varchar(255) NULL,",
-      "name varchar(255) NULL,",
-      "email varchar(255) NULL,",
-      "updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),",
-      "created_at TIMESTAMP NOT NULL,",
-      "PRIMARY KEY(id)",
-      ")"
-  ].join(" "));
   return null;
 };
 
 exports.down = function(db) {
-  return db.dropTable('members');
+  return null;
 };
 
 exports._meta = {
