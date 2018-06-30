@@ -17,4 +17,10 @@ router.post('/submit_signup', loginController.submit_signup);
 const memberController = require('../controllers/members');
 //member controller end
 
+// Custom error handler
+router.use((err, req, res, next) => {
+    console.log('In custom error handler. Error: ', err)
+    res.send('Custom error handler. Error: ', err)
+})
+
 module.exports = router;
