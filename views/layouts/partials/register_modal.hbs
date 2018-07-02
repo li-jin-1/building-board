@@ -34,7 +34,7 @@
         </div>
     </form>
 
-    <form id="sign_up_form" class="modal-content animate" action="/submit_signup" style="display: none;">
+    <form id="sign_up_form" class="modal-content animate" action="/signup" style="display: none;">
         <div class="imgcontainer">
             <img src="/images/655_w_irving.jpg" alt="Avatar" class="avatar">
         </div>
@@ -66,7 +66,7 @@
 
 <script>
     // Get the modal
-    var modal = document.getElementById('register_modal_box');
+    let modal = document.getElementById('register_modal_box');
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
@@ -80,7 +80,7 @@
         e.stopPropagation();
         $.ajax({
             type: "POST",
-            url: '/submit_signup',
+            url: '/signup',
             data: $( "#sign_up_form" ).serialize()
         }).done(function(data){
             $('body').append(data);
@@ -93,6 +93,7 @@
             $('#sign_up_form').hide();
         }
         else if(action == 'sign_up'){
+            $('#sign_in_form').hide();
             $('#sign_in_form').hide();
             $('#sign_up_form').show();
         }

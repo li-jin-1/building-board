@@ -6,12 +6,12 @@ const homeController = require('../controllers/home');
 router.get('/', homeController.home);
 //home controller end
 
-//login controller
-const loginController = require('../controllers/login');
-router.get('/signup', loginController.singup);
-router.get('/signin', loginController.signin);
-router.post('/submit_signup', loginController.submit_signup);
-//login controller end
+//auth controller
+const authController = require('../controllers/auth');
+router.get('/signup', authController.signup);
+router.get('/signin', authController.signin);
+router.post('/signup', authController.submit_signup);
+//auth controller end
 
 //member controller
 const memberController = require('../controllers/members');
