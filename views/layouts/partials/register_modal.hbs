@@ -83,6 +83,7 @@
             url: '/signup',
             data: $( "#sign_up_form" ).serialize()
         }).done(function(data){
+            //eval(data);
             $('body').append(data);
         });
     });

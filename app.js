@@ -5,6 +5,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
+global.appRoot = path.resolve(__dirname);
 
 var app = express();
 require('dotenv').config();

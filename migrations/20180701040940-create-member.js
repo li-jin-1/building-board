@@ -15,9 +15,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.STRING
       },
       username: {
+        allowNull: false,
+        unique: true,
         type: Sequelize.STRING
       },
       password: {
@@ -31,7 +35,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    }).then(() => queryInterface.addIndex('Members', ['email', 'username']));
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Members');
