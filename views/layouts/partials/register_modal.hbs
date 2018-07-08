@@ -10,19 +10,24 @@
         </div>
     </div>
     <!-- Modal Content -->
-    <form id="sign_in_form" class="modal-content animate" method="post" action="/action_page.php">
+    <form id="sign_in_form" class="modal-content animate" method="post" action="/signin">
         <div class="imgcontainer">
             <img src="/images/655_w_irving.jpg" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <button type="submit">Sign In</button>
+            <div class="error_msg"></div>
+            <div class="form_email">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <div class="error_msg"></div>
+            </div>
+            <div class="form_password">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <div class="error_msg"></div>
+            </div>
+            <button type="submit" id="signin_button">Sign In</button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
@@ -34,25 +39,33 @@
         </div>
     </form>
 
-    <form id="sign_up_form" class="modal-content animate" action="/signup" style="display: none;">
+    <form id="sign_up_form" class="modal-content animate" action="/signup" method="post" style="display: none;">
         <div class="imgcontainer">
             <img src="/images/655_w_irving.jpg" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
-
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
-
-            <label for="pswmatch"><b>Confirm Password</b></label>
-            <input type="password" placeholder="Enter Password" name="passwordmatch" required>
-
-            <button type="submit">Sign Up</button>
+            <div class="form_username">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+                <div class="error_msg"></div>
+            </div>
+            <div class="form_email">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <div class="error_msg"></div>
+            </div>
+            <div class="form_password">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <div class="error_msg"></div>
+            </div>
+            <div class="form_passwordmatch">
+                <label for="pswmatch"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Enter Password" name="passwordmatch" required>
+                <div class="error_msg"></div>
+            </div>
+            <button type="submit" id="signup_button">Sign Up</button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
@@ -75,7 +88,7 @@
         }
     };
 
-    $('button[type=submit]').on('click', function(e){
+    $('#signup_button').on('click', function(e){
         e.preventDefault();
         e.stopPropagation();
         $.ajax({
@@ -83,8 +96,19 @@
             url: '/signup',
             data: $( "#sign_up_form" ).serialize()
         }).done(function(data){
-            //eval(data);
-            $('body').append(data);
+            eval($(data).html());
+        });
+    });
+
+    $('#signin_button').on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $.ajax({
+            type: "POST",
+            url: '/signin',
+            data: $( "#sign_in_form" ).serialize()
+        }).done(function(data){
+            eval($(data).html());
         });
     });
 
@@ -94,7 +118,6 @@
             $('#sign_up_form').hide();
         }
         else if(action == 'sign_up'){
-            $('#sign_in_form').hide();
             $('#sign_in_form').hide();
             $('#sign_up_form').show();
         }

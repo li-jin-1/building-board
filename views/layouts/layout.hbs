@@ -15,12 +15,18 @@
 			</div>
 			<nav id="nav" class="main-nav">
 				<ul id="menu-home" class="top-menu">
-					<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
-						<a href="javascript:openRegisterModal('sign_up');" id="sign_up_modal_link" target="_self">Sign Up</a>
-					</li>
-					<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274">
-						<a href="javascript:openRegisterModal('sign_in');" id="sign_in_modal_link" target="_self">Sign In</a>
-					</li>
+                    {{#if isAuthenticated}}
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
+                            <a href="/signout" id="signout_link" target="_self">Sign Out</a>
+                        </li>
+                    {{else}}
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
+                            <a href="javascript:openRegisterModal('sign_up');" id="sign_up_modal_link" target="_self">Sign Up</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274">
+                            <a href="javascript:openRegisterModal('sign_in');" id="sign_in_modal_link" target="_self">Sign In</a>
+                        </li>
+                    {{/if}}
 				</ul>
 			</nav>
 			<div class="clear"></div>

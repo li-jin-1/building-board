@@ -1,5 +1,5 @@
-const path = require('path');
-const models  = require('../models');
+const passport = require('passport');
+const models = require('../models');
 
 exports.signup = function (req, res, next) {
     try {
@@ -10,19 +10,19 @@ exports.signup = function (req, res, next) {
     }
 };
 exports.submit_signup = async function (req, res, next) {
-    try{
+    try {
         const params = {};
         params['username'] = req.body.username;
         params['email'] = req.body.email;
         params['password'] = req.body.password;
-        let member = await models.Member.createOrAuthenticate(params);
-        console.log('after await.....')
-        console.log(member)
-
-        console.log(error)
-        console.log('lllllllllll---------')
-        //res.sendFile(path.join(appRoot+'/views/auth/submit_signup.js'));
-      //  res.render('auth/submit_signup', {layout: false});
+        params['passwordmatch'] = req.body.passwordmatch;
+        let [member, errors] = await models.Member.createOrAuthenticate(params);
+        if (member) {
+            req.login(member.id, function (err) {
+                if (err) throw err;
+            });
+        }
+        res.render('auth/submit_signup', {errors: errors, member: member, layout: false});
     }
     catch (e) {
         next(e);
@@ -38,10 +38,33 @@ exports.signin = function (req, res, next) {
 };
 exports.submit_signin = function (req, res, next) {
     try {
-        res.render('auth/signin');
+        passport.authenticate('local', function (err, member, info) {
+            if (err) {
+                return next(err);
+            }
+            if (member) {
+                req.login(member.id, function (err) {
+                    if (err) throw err;
+                });
+                res.render('auth/submit_signup', {errors: null, member: member, layout: false});
+            }
+            if (info) {
+                res.render('auth/submit_signin', {errors: info['message'], member: member, layout: false});
+            }
+        })(req, res, next);
     }
     catch (e) {
         next(e)
     }
 };
 
+exports.signout = function (req, res, next) {
+    try {
+        req.logout();
+        req.session.destroy();
+        res.redirect('/');
+    }
+    catch (e) {
+        next(e);
+    }
+};

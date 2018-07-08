@@ -1,0 +1,9 @@
+<script>
+        {{#if errors}}
+            $('#sign_in_form>.container>.error_msg').html('{{errors}}');
+        {{else if member}}
+            $('#sign_in_form>.container>.error_msg').html('');
+            $('#register_modal_box').css('display', 'none');
+            alert('success');
+        {{/if}}
+</script>

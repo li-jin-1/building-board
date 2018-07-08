@@ -781,9 +781,16 @@ font-weight : bold;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    /*display: inline-block;*/
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.modal input[type=text].error, .modal input[type=password].error {
+    border-color: #f44336;
+}
+.modal .error_msg {
+    color: #f44336;
 }
 
 /* Set a style for all buttons */
@@ -816,7 +823,7 @@ font-weight : bold;
 }
 
 .modal img.avatar {
-    width: 40%;
+    width: 10%;
     border-radius: 50%;
 }
 

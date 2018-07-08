@@ -9,5 +9,8 @@ exports.home = function (req, res, next) {
         expect(r).to.equal(2);
         res.render('home/index', { title: 'aaa' });
     });*/
+    console.log('1.......')
+    console.log(req.user);
+    console.log(req.isAuthenticated())
 res.render('home/index', { title: 'aaa' });
 };

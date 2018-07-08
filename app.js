@@ -1,13 +1,18 @@
-var createError = require('http-errors');
-var express = require('express');
-var hbs = require('hbs');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var lessMiddleware = require('less-middleware');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const hbs = require('hbs');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const RedisStore = require('connect-redis')(session);
+const redis_client = require("redis").createClient();
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const lessMiddleware = require('less-middleware');
+let logger = require('morgan');
 global.appRoot = path.resolve(__dirname);
 
-var app = express();
+const app = express();
 require('dotenv').config();
 
 // view engine setup
@@ -25,10 +30,43 @@ app.use(lessMiddleware(path.join(__dirname, 'public/source/less'), {
     force: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+let sess = {
+    store: new RedisStore({
+        host: '127.0.0.1',
+        port: '6379',
+        client: redis_client
+    }),
+    secret: process.env.SESSION_SECRET,
+    resave: process.env.SESSION_RESAVE,
+    saveUninitialized: process.env.SESSION_SAVEUNINITIALIZED,
+    cookie: {maxAge: 1000 * 60 * 60 * 24 * 30} // session expire in 30 days
+};
+if (app.get('env') === 'production') {
+    app.set('trust proxy', 1); // trust first proxy
+    sess.cookie.secure = true; // serve secure cookies
+}
+app.use(session(sess));
+app.use(passport.initialize());
+app.use(passport.session());
 //routes file
 const routes = require('./routes/routes.js');
 app.use('/', routes);
+
+const models  = require('./models');
+
+passport.use(new LocalStrategy({
+        usernameField: 'email',
+        passwordField: 'password'
+    },
+    models.Member.authenticate
+));
+passport.serializeUser(function(member_id, done) {
+    done(null, member_id);
+});
+
+passport.deserializeUser(function(member_id, done) {
+    done(null, member_id);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -45,5 +83,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;

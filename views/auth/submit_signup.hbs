@@ -1,4 +1,13 @@
 <script>
-console.log(22)
-    $('img').remove()
+    $('#sign_up_form input').removeClass('error');
+    $('#sign_up_form .error_msg').html('');
+    {{#if errors}}
+        {{#each errors}}
+            $('#sign_up_form input[name={{this.path}}]').addClass('error');
+            $('#sign_up_form .form_{{this.path}} .error_msg').html("{{this.message}}");
+        {{/each}}
+    {{else if member}}
+        $('#register_modal_box').css('display', 'none');
+        alert('success');
+    {{/if}}
 </script>
