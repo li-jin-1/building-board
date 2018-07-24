@@ -6,7 +6,8 @@ router.use(middleware.checkLogin);
 
 //home controller
 const homeController = require('../controllers/home');
-router.get('/', middleware.loginRequired, homeController.home);
+//router.get('/', middleware.loginRequired, homeController.home);
+router.get('/', homeController.home);
 //home controller end
 
 //auth controller

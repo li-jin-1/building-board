@@ -9,6 +9,7 @@ const redis_client = require("redis").createClient();
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const lessMiddleware = require('less-middleware');
+var sassMiddleware = require('node-sass-middleware')
 let logger = require('morgan');
 global.appRoot = path.resolve(__dirname);
 
@@ -19,6 +20,11 @@ require('dotenv').config();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.set('view options', {layout: 'layouts/layout'});
+hbs.registerHelper('section', function(name, options){
+    if(!this._sections) this._sections = {};
+    this._sections[name] = options.fn(this);
+    return null;
+});
 hbs.registerPartials(__dirname + '/views/layouts/partials');
 
 app.use(logger('dev'));
@@ -28,6 +34,14 @@ app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public/source/less'), {
     dest: path.join(__dirname, 'public'),
     force: true
+}));
+app.use(sassMiddleware({
+    /* Options */
+    src: path.join(__dirname, 'public/source/sass'),
+    dest: path.join(__dirname, 'public/stylesheets/sass'),
+    debug: true,
+    outputStyle: 'compressed',
+    prefix:  '/stylesheets/sass'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 let sess = {

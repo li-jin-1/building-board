@@ -46,10 +46,13 @@ exports.submit_signin = function (req, res, next) {
                 req.login(member.id, function (err) {
                     if (err) throw err;
                 });
-                res.render('auth/submit_signup', {errors: null, member: member, layout: false});
+                res.render('auth/submit_signin', {errors: null, member: member, layout: false});
             }
             if (info) {
-                res.render('auth/submit_signin', {errors: info['message'], member: member, layout: false});
+                if(info['message'] == 'Missing credentials'){
+                    info['errors'] = {'password': 'Missing password'};
+                }
+                res.render('auth/submit_signin', {errors: info['errors'], member: member, layout: false});
             }
         })(req, res, next);
     }

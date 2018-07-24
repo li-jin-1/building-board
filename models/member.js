@@ -120,9 +120,19 @@ module.exports = (sequelize, DataTypes) => {
       Member.authenticate = async function(email, password, done) {
           try {
               let member = await models.Member.findOne({where: {email: email}});
-              let validPassword = await member.validPassword(password);
+              let validPassword;
+              let errors = {};
+              if(member) {
+                  validPassword = await member.validPassword(password);
+              }
+              else {
+                  errors['email'] = 'Incorrect email';
+              }
+              if (!validPassword) {
+                  errors['password'] = 'Incorrect password';
+              }
               if (!member || !validPassword) {
-                  return done(null, false, { message: 'Incorrect email or password.' });
+                  return done(null, false,  { errors: errors });
               }
               if(member && validPassword) {
                   return done(null, member);

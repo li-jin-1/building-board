@@ -1,94 +1,109 @@
-<div id="register_modal_box" class="modal">
-  <span onclick="document.getElementById('register_modal_box').style.display='none'"
-        class="close" title="Close Modal">&times;</span>
-    <div class="switcher">
-        <div class="sign_in_tab">
-            <a href="javascript:switchTabs('sign_in');" id="sign_up_modal_link" target="_self">Sign In</a>
+<div class="modal fade" id="register_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+
+                <!-- Nav tabs -->
+                <ul class="nav-bar nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="log_in_modal" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="sign_up_modal" data-toggle="tab" href="#panel8" role="tab"><i class="fa fa-user-plus mr-1"></i> Register</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                        <form id="sign_in_form" class="modal-content animate" method="post" action="/signin">
+                            <div class="modal-body mb-1">
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="email" id="sign_in_email" class="form-control form-control-sm validate" name="email" required >
+                                <label data-error="Invalid email" data-success="" for="sign_in_email">Your email</label>
+                            </div>
+
+                            <div class="md-form form-sm mb-4">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" id="sign_in_password" class="form-control form-control-sm validate" name="password" required />
+                                <label data-error="wrong" data-success="" for="sign_in_password">Your password</label>
+                            </div>
+                            <div class="text-center mt-2">
+                                <button class="btn btn-info" id="submit_sign_in">Log in <i class="fa fa-sign-in-alt ml-1"></i></button>
+                            </div>
+                            </div>
+                        </form>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-center text-md-right mt-1">
+                                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                            </div>
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                    <!--Panel 8-->
+                    <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                        <form id="sign_up_form" class="modal-content animate" action="/signup" method="post">
+                            <div class="modal-body">
+                                <div class="md-form form-sm mb-5">
+                                    <i class="fa fa-envelope prefix"></i>
+                                    <input type="text" id="sign_up_username" class="form-control form-control-sm validate" name="username" required>
+                                    <label data-error="wrong" data-success="" for="sign_up_username">Your Username</label>
+                                </div>
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="email" id="sign_up_email" class="form-control form-control-sm validate" name="email" required>
+                                <label data-error="wrong" data-success="" for="sign_up_email">Your email</label>
+                            </div>
+
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" id="sign_up_password" class="form-control form-control-sm validate" name="password" required>
+                                <label data-error="wrong" data-success="" for="sign_up_password">Your password</label>
+                            </div>
+
+                            <div class="md-form form-sm mb-5">
+                                <i class="fa fa-lock prefix"></i>
+                                <input type="password" id="sign_up_passwordmatch" class="form-control form-control-sm validate" name="passwordmatch" required>
+                                <label data-error="wrong" data-success="" for="sign_up_passwordmatch">Repeat password</label>
+                            </div>
+
+                            <div class="text-center form-sm mt-2">
+                                <button class="btn btn-info" id="submit_sign_up">Sign up <i class="fa fa-sign-in-alt ml-1"></i></button>
+                            </div>
+
+                            </div>
+                        </form>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <div class="options text-right">
+                                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                            </div>
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    <!--/.Panel 8-->
+                </div>
+
+            </div>
         </div>
-        <div class="sign_up_tab">
-            <a href="javascript:switchTabs('sign_up');" id="sign_up_modal_link" target="_self">Sign Up</a>
-        </div>
+        <!--/.Content-->
     </div>
-    <!-- Modal Content -->
-    <form id="sign_in_form" class="modal-content animate" method="post" action="/signin">
-        <div class="imgcontainer">
-            <img src="/images/655_w_irving.jpg" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-            <div class="error_msg"></div>
-            <div class="form_email">
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-                <div class="error_msg"></div>
-            </div>
-            <div class="form_password">
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
-                <div class="error_msg"></div>
-            </div>
-            <button type="submit" id="signin_button">Sign In</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('register_modal_box').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-    </form>
-
-    <form id="sign_up_form" class="modal-content animate" action="/signup" method="post" style="display: none;">
-        <div class="imgcontainer">
-            <img src="/images/655_w_irving.jpg" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-            <div class="form_username">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
-                <div class="error_msg"></div>
-            </div>
-            <div class="form_email">
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-                <div class="error_msg"></div>
-            </div>
-            <div class="form_password">
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
-                <div class="error_msg"></div>
-            </div>
-            <div class="form_passwordmatch">
-                <label for="pswmatch"><b>Confirm Password</b></label>
-                <input type="password" placeholder="Enter Password" name="passwordmatch" required>
-                <div class="error_msg"></div>
-            </div>
-            <button type="submit" id="signup_button">Sign Up</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-    </form>
 </div>
-
-<script>
-    // Get the modal
-    let modal = document.getElementById('register_modal_box');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-
-    $('#signup_button').on('click', function(e){
+{{#section 'javascript'}}
+<script type="text/javascript" >
+    $('#submit_sign_up').on('click', function(e){
         e.preventDefault();
         e.stopPropagation();
         $.ajax({
@@ -100,7 +115,7 @@
         });
     });
 
-    $('#signin_button').on('click', function(e){
+    $('#submit_sign_in').on('click', function(e){
         e.preventDefault();
         e.stopPropagation();
         $.ajax({
@@ -111,20 +126,5 @@
             eval($(data).html());
         });
     });
-
-    function switchTabs(action){
-        if(action == 'sign_in'){
-            $('#sign_in_form').show();
-            $('#sign_up_form').hide();
-        }
-        else if(action == 'sign_up'){
-            $('#sign_in_form').hide();
-            $('#sign_up_form').show();
-        }
-    }
-
-    function openRegisterModal(action){
-        document.getElementById('register_modal_box').style.display='block';
-        switchTabs(action);
-    }
 </script>
+{{/section}}

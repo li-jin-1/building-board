@@ -1,9 +1,15 @@
+
 <script>
+    $('input[id^=sign_in]').removeClass('invalid');
         {{#if errors}}
-            $('#sign_in_form>.container>.error_msg').html('{{errors}}');
+            {{#each errors}}
+                $("#sign_in_form #sign_in_{{@key}}").addClass('invalid');
+                $("#sign_in_form [for='sign_in_{{@key}}']").addClass('active').attr('data-error', '{{this}}');
+            {{/each}}
         {{else if member}}
-            $('#sign_in_form>.container>.error_msg').html('');
-            $('#register_modal_box').css('display', 'none');
-            alert('success');
+            $("#sign_in_form #sign_in_{{@key}}").removeClass('invalid');
+            $("#sign_in_form label[for='sign_in_{{@key}}']").removeClass('active');
+            $("nav").html(`{{>login_nav}}`);
+            $('#register_modal').modal('hide');
         {{/if}}
 </script>

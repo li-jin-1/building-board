@@ -1,13 +1,12 @@
 <script>
-    $('#sign_up_form input').removeClass('error');
-    $('#sign_up_form .error_msg').html('');
+    $('input[id^=sign_up]').removeClass('invalid');
     {{#if errors}}
         {{#each errors}}
-            $('#sign_up_form input[name={{this.path}}]').addClass('error');
-            $('#sign_up_form .form_{{this.path}} .error_msg').html("{{this.message}}");
+            $("#sign_up_form #sign_up_{{this.path}}").addClass('invalid');
+            $("#sign_up_form label[for='sign_up_{{this.path}}']").addClass('active').attr('data-error', '{{this.message}}');
         {{/each}}
     {{else if member}}
-        $('#register_modal_box').css('display', 'none');
-        alert('success');
+        $('#register_modal').modal('hide');
+        $("nav").html(`{{>login_nav}}`);
     {{/if}}
 </script>

@@ -7,6 +7,6 @@ exports.loginRequired = function(req, res, next) {
         next();
     }
     else{
-        res.redirect('/signin');
+        res.redirect('/');
     }
 };
