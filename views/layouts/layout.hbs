@@ -8,14 +8,14 @@
     {{{_sections.head}}}
     <title>{{title}}</title>
     <!-- Font Awesome -->
-    <link rel='stylesheet' href='/font/fontawesome-free/css/all.css' />
+    <link rel='stylesheet' href='/font/fontawesome-free/css/all.css'/>
     <!-- Bootstrap core CSS -->
-    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'/>
     <!-- Material Design Bootstrap -->
-    <link rel='stylesheet' href='/stylesheets/mdb.min.css' />
+    <link rel='stylesheet' href='/stylesheets/mdb.min.css'/>
     <!-- Your custom styles (optional) -->
-    <link rel='stylesheet' href='/stylesheets/sass/main.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/sass/main.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
 </head>
 
 <body>
@@ -28,8 +28,10 @@
 </header>
 <main class="mt-5 pt-5">
     <div class="container">
-    {{> register_modal}}
-    {{{body}}}
+        {{#unless isAuthenticated}}
+            {{> register_modal}}
+        {{/unless}}
+        {{{body}}}
     </div>
 </main>
 <div class="clear"></div>
