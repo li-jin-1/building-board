@@ -20,6 +20,7 @@ exports.submit_signup = async function (req, res, next) {
         if (member) {
             req.login(member.id, function (err) {
                 if (err) throw err;
+                res.locals.member = member;
             });
         }
         res.render('auth/submit_signup', {errors: errors, member: member, layout: false});
@@ -45,6 +46,7 @@ exports.submit_signin = function (req, res, next) {
             if (member) {
                 req.login(member.id, function (err) {
                     if (err) throw err;
+                    res.locals.member = member;
                 });
                 res.render('auth/submit_signin', {errors: null, member: member, layout: false});
             }
