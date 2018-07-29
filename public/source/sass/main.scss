@@ -29,7 +29,12 @@ $zindex-tooltip:           1070 !default;
 @include media-breakpoint-up($xl) {
 
 }
-
+body {
+  background-color: #e6ecf0;
+}
+.fixed-top-2 {
+  margin-top: 56px;
+}
 .nav-link:active, .nav-link:focus, .nav-link:hover{
   outline: 0;
 }
