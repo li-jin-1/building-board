@@ -1,0 +1,100 @@
+<main class="mt-3 pt-3">
+    <div class="container">
+        <ul class="nav nav-tabs nav-justified mx-0 mb-0 z-depth-0 primary-color" role="tablist" id="new_post_tabs" style="border-radius: 0;">
+            <li class="nav-item">
+                <a class="nav-link active" id="new_post_editor_tab" data-toggle="tab" href="#panel5" role="tab"><i class="fa fa-comment-alt"></i> Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="new_post_image_upload_tab" data-toggle="tab" href="#panel6" role="tab"><i class="fa fa-file-image"></i> Image</a>
+            </li>
+        </ul>
+        <div class="card mb-3 wow" id="tab_content">
+            <div class="card-body" id="new_post_editor">
+
+                <!-- Default form reply -->
+                <form id="new_post_form" class="" method="post" action="/submit_post">
+                    <label for="post_title">Your Title</label>
+                    <input type="text" name="title" class="form-control" id="post_title" required>
+                    <br>
+                    <!-- Comment -->
+                    <div class="form-group">
+                        <label for="content">Your Post</label>
+                        <textarea class="form-control" name="content" rows="5"></textarea>
+                    </div>
+                    <input type="file" id="image_file_input">
+                </form>
+                <!-- Default form reply -->
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary btn-md waves-effect waves-light" type="submit" id="submit_new_post_form">Next</button>
+                </div>
+
+            </div>
+            <div class="card-body d-none" id="new_post_image_upload">
+                <section>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+
+                            <div class="view overlay">
+                                <img src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg" class="img-fluid " alt="placeholder">
+                                <div class="mask waves-effect waves-light rgba-grey-light pt-2 pl-2">
+                                    <i class="fa fa-trash-alt"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+
+                            <div class="view overlay grey lighten-5" id="upload_post_image">
+                                <img src="images/upload.png" class="img-fluid " alt="placeholder">
+                                <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary btn-md waves-effect waves-light" type="submit" id="save_and_post">Save & Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{#section 'javascript'}}
+    <script type="text/javascript">
+        $('#new_post_tabs a').on('click', function(e){
+            e.preventDefault();
+            if(this.id == 'new_post_image_upload_tab'){
+                if($('#post_title').val().length == 0){
+                    $('#post_title').addClass('error-text');
+                    $('#new_post_editor_tab').tab('show');
+                }
+                else{
+                    $('#new_post_editor').addClass('d-none');
+                    $('#new_post_image_upload').removeClass('d-none');
+                }
+            }
+            else{
+                $('#new_post_editor').removeClass('d-none');
+                $('#new_post_image_upload').addClass('d-none');
+            }
+        });
+        $('#submit_new_post_form').on('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            $('#new_post_image_upload_tab').click();
+        });
+        $('#upload_post_image').on('click', function(){
+            $('#image_file_input').click();
+        });
+        $('#image_file_input').on('change', function(){
+            $.ajax({
+                type: "POST",
+                url: '/submit_post',
+                data: $( "#new_post_form" ).serialize()
+            }).done(function(data){
+                eval($(data).html());
+            });
+        });
+    </script>
+{{/section}}

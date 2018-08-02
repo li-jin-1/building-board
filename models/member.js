@@ -82,12 +82,18 @@ module.exports = (sequelize, DataTypes) => {
   Member.associate = function(models) {
     // associations can be defined here
       Member.belongsToMany(models.Building, {through: 'BuildingMember'});
+      Member.hasOne(models.ContentThread);
+      Member.hasMany(models.post);
 
       Member.hook('beforeCreate', async (member, options) => {
           if(member.password){
               const hash = await bcrypt.hash(member.password, saltRounds);
               member.hashed_password = hash;
           }
+      });
+
+      Member.hook('afterCreate', async (member, options) => {
+          models.ContentThread.create({MemberId: member.id});
       });
 
       Member.activeMember = async function () {

@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   Building.associate = function(models) {
     // associations can be defined here
       Building.belongsToMany(models.Member, {through: 'BuildingMember'});
+      Building.hasMany(models.ContentThread);
   };
   return Building;
 };

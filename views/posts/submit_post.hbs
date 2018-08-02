@@ -1,0 +1,9 @@
+
+<script>
+    {{#if error}}
+        $('#post_title').addClass('error-text');
+    {{else}}
+        $('#post_title').removeClass('error-text');
+        $('#new_post_image_upload_tab').click().tab('show');
+    {{/if}}
+</script>

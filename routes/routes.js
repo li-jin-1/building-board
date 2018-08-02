@@ -23,6 +23,12 @@ router.get('/signout', authController.signout);
 const memberController = require('../controllers/members');
 //member controller end
 
+//posts controller
+const postsController = require('../controllers/posts');
+router.get('/new_post', postsController.new_post);
+router.post('/submit_post', postsController.submit_post);
+//posts controller end
+
 // Custom error handler
 router.use((err, req, res, next) => {
     console.log('In custom error handler. Error: ', err);
