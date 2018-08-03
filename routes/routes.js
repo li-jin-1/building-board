@@ -1,5 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const multer  = require('multer');
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './uploads')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+});
+let upload = multer( { dest: 'uploads/' } );
 
 const middleware = require('../controllers/middleware_helper');
 router.use(middleware.checkLogin);
@@ -26,7 +36,7 @@ const memberController = require('../controllers/members');
 //posts controller
 const postsController = require('../controllers/posts');
 router.get('/new_post', postsController.new_post);
-router.post('/submit_post', postsController.submit_post);
+router.post('/submit_post', upload.array('source_file[]'), postsController.submit_post);
 //posts controller end
 
 // Custom error handler

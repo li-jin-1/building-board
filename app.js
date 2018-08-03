@@ -11,6 +11,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const lessMiddleware = require('less-middleware');
 var sassMiddleware = require('node-sass-middleware')
 let logger = require('morgan');
+
 global.appRoot = path.resolve(__dirname);
 
 const app = express();

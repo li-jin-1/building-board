@@ -2,10 +2,10 @@
     <div class="container">
         <ul class="nav nav-tabs nav-justified mx-0 mb-0 z-depth-0 primary-color" role="tablist" id="new_post_tabs" style="border-radius: 0;">
             <li class="nav-item">
-                <a class="nav-link active" id="new_post_editor_tab" data-toggle="tab" href="#panel5" role="tab"><i class="fa fa-comment-alt"></i> Post</a>
+                <a class="nav-link active" id="new_post_editor_tab" data-toggle="tab" href="javascript:void(0)" role="tab"><i class="fa fa-comment-alt"></i> Post</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="new_post_image_upload_tab" data-toggle="tab" href="#panel6" role="tab"><i class="fa fa-file-image"></i> Image</a>
+                <a class="nav-link" id="new_post_image_upload_tab" href="javascript:void(0)" role="tab"><i class="fa fa-file-image"></i> Image</a>
             </li>
         </ul>
         <div class="card mb-3 wow" id="tab_content">
@@ -21,7 +21,6 @@
                         <label for="content">Your Post</label>
                         <textarea class="form-control" name="content" rows="5"></textarea>
                     </div>
-                    <input type="file" id="image_file_input">
                 </form>
                 <!-- Default form reply -->
                 <div class="text-center mt-4">
@@ -29,30 +28,32 @@
                 </div>
 
             </div>
+
             <div class="card-body d-none" id="new_post_image_upload">
-                <section>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
+                    <section id="dropzone-target">
+                        <div class="row">
+                            <!--<div class="col-lg-4 col-md-6 mb-4">-->
 
-                            <div class="view overlay">
-                                <img src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg" class="img-fluid " alt="placeholder">
-                                <div class="mask waves-effect waves-light rgba-grey-light pt-2 pl-2">
-                                    <i class="fa fa-trash-alt"></i>
+                            <!--<div class="view overlay">-->
+                            <!--<img src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg" class="img-fluid " alt="placeholder">-->
+                            <!--<div class="mask waves-effect waves-light rgba-grey-light pt-2 pl-2">-->
+                            <!--<i class="fa fa-trash-alt"></i>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <!--</div>-->
+
+                            <div class="col-lg-4 col-md-6 mb-4">
+
+                                <div class="view overlay grey lighten-5" id="upload_post_image">
+                                    <img src="images/upload.png" class="img-fluid " alt="placeholder">
+                                    <div class="mask flex-center waves-effect waves-light rgba-grey-light">
+                                    </div>
                                 </div>
+
                             </div>
-
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-
-                            <div class="view overlay grey lighten-5" id="upload_post_image">
-                                <img src="images/upload.png" class="img-fluid " alt="placeholder">
-                                <div class="mask flex-center waves-effect waves-light rgba-grey-light">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
+                    </section>
                 <div class="text-center mt-4">
                     <button class="btn btn-primary btn-md waves-effect waves-light" type="submit" id="save_and_post">Save & Post</button>
                 </div>
@@ -61,6 +62,7 @@
     </div>
 </main>
 {{#section 'javascript'}}
+    <script src="/javascripts/dropzone.js"></script>
     <script type="text/javascript">
         $('#new_post_tabs a').on('click', function(e){
             e.preventDefault();
@@ -70,6 +72,7 @@
                     $('#new_post_editor_tab').tab('show');
                 }
                 else{
+                    $('#new_post_image_upload_tab').attr('data-toggle', 'tab');
                     $('#new_post_editor').addClass('d-none');
                     $('#new_post_image_upload').removeClass('d-none');
                 }
@@ -82,19 +85,264 @@
         $('#submit_new_post_form').on('click', function(e){
             e.preventDefault();
             e.stopPropagation();
-            $('#new_post_image_upload_tab').click();
+            $('#new_post_image_upload_tab').attr('data-toggle', 'tab').click();
         });
-        $('#upload_post_image').on('click', function(){
-            $('#image_file_input').click();
-        });
-        $('#image_file_input').on('change', function(){
-            $.ajax({
-                type: "POST",
-                url: '/submit_post',
-                data: $( "#new_post_form" ).serialize()
-            }).done(function(data){
-                eval($(data).html());
+        // $('#upload_post_image').on('click', function(){
+        //     $('#image_file_input').click();
+        // });
+        // $('#image_file_input').on('change', function(){
+        //     $.ajax({
+        //         type: "POST",
+        //         url: '/submit_post',
+        //         data: $( "#new_post_form" ).serialize()
+        //     }).done(function(data){
+        //         eval($(data).html());
+        //     });
+        // });
+
+
+
+
+        //dropzone....
+        // Dropzone.options.dropzoneTarget = {
+        //
+        //     // Prevents Dropzone from uploading dropped files immediately
+        //     autoProcessQueue: false,
+        //
+        //     init: function() {
+        //         var submitButton = document.querySelector("#submit-all")
+        //         myDropzone = this; // closure
+        //
+        //         submitButton.addEventListener("click", function() {
+        //             myDropzone.processQueue(); // Tell Dropzone to process all queued files.
+        //         });
+        //
+        //         // You might want to show the submit button only when
+        //         // files are dropped here:
+        //         this.on("addedfile", function() {
+        //             // Show submit button here and/or inform user to click it.
+        //         });
+        //
+        //     }
+        // };
+       // $("#dropzone-target").dropzone({ url: "/submit_post" });
+       //  Dropzone.autoDiscover = false;
+       //  $("#dropzone-target").dropzone({
+       //      url: "/submit_post",
+       //      addRemoveLinks: true,
+       //      success: function (file, response) {
+       //          var imgName = response;
+       //          file.previewElement.classList.add("dz-success");
+       //          console.log(“Successfully uploaded :” + imgName);
+       //      },
+       //      error: function (file, response) {
+       //          file.previewElement.classList.add("dz-error");
+       //      }
+       //  });
+       //  Dropzone.options.dropzoneTarget = { // The camelized version of the ID of the form element
+       //
+       //      // The configuration we've talked about above
+       //      autoProcessQueue: false,
+       //      uploadMultiple: true,
+       //      parallelUploads: 100,
+       //      maxFiles: 100,
+       //
+       //      // The setting up of the dropzone
+       //      init: function() {
+       //          var myDropzone = this;
+       //
+       //          // First change the button to actually tell Dropzone to process the queue.
+       //          document.querySelector("#save_and_post").addEventListener("click", function(e) {
+       //              // Make sure that the form isn't actually being sent.
+       //              e.preventDefault();
+       //              e.stopPropagation();
+       //              console.log('click drop zone.....');
+       //              myDropzone.processQueue();
+       //          });
+       //
+       //          // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
+       //          // of the sending event because uploadMultiple is set to true.
+       //          this.on("sendingmultiple", function() {
+       //              // Gets triggered when the form is actually being sent.
+       //              // Hide the success button or the complete form.
+       //              console.log('sending.....')
+       //          });
+       //          this.on("successmultiple", function(files, response) {
+       //              // Gets triggered when the files have successfully been sent.
+       //              // Redirect user or notify of success.
+       //              console.log('success.....')
+       //          });
+       //          this.on("errormultiple", function(files, response) {
+       //              // Gets triggered when there was an error sending the files.
+       //              // Maybe show form again, and notify user of error
+       //              console.log('error......')
+       //          });
+       //      }
+       //
+       //  }
+
+        $(document).ready(function () {
+            // myDropzone;
+            // $('#save_and_post').on("click", function (e) {
+            //     e.preventDefault();
+            //     e.stopPropagation();
+            //     console.log('haj?')
+            //     console.log(myDropzone.getQueuedFiles().length)
+            //         if (myDropzone.getQueuedFiles().length > 0) {
+            //         console.log('process....')
+            //             myDropzone.processQueue();
+            //         } else {
+            //             $.ajax({
+            //                         type: "POST",
+            //                         url: '/submit_post',
+            //                         data: $( "#new_post_form" ).serialize()
+            //                     }).done(function(data){
+            //                         eval($(data).html());
+            //                     });
+            //         }
+            // });
+            // document.querySelector("#save_and_post").addEventListener("click", function(e) {
+            //     // Make sure that the form isn't actually being sent.
+            //     e.preventDefault();
+            //     e.stopPropagation();
+            //     console.log('click drop zone.....');
+            //     $("#dropzone-target").processQueue();
+            // });
+
+            //Simple Dropzonejs
+            // $("#dropzone-target").dropzone({
+            //     url: "/submit_post",
+            //  //   autoProcessQueue: false,
+            //    // uploadMultiple: true,
+            //     parallelUploads: 100,
+            //     // addRemoveLinks: true,
+            //     maxFiles: 1,
+            //     // init: function() {
+            //     //      myDropzone = this;
+            //     //     // First change the button to actually tell Dropzone to process the queue.
+            //     //
+            //     //     $('#save_and_post').on("click", function (e) {
+            //     //         e.preventDefault();
+            //     //         e.stopPropagation();
+            //     //         console.log('haj?')
+            //     //         console.log(myDropzone.getQueuedFiles().length)
+            //     //         if (myDropzone.getQueuedFiles().length > 0) {
+            //     //             console.log('process....')
+            //     //             myDropzone.processQueue();
+            //     //         } else {
+            //     //             $.ajax({
+            //     //                 type: "POST",
+            //     //                 url: '/submit_post',
+            //     //                 data: $( "#new_post_form" ).serialize()
+            //     //             }).done(function(data){
+            //     //                 eval($(data).html());
+            //     //             });
+            //     //         }
+            //     //     });
+            //     //     // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
+            //     //     // of the sending event because uploadMultiple is set to true.
+            //     //     this.on("sendingmultiple", function(file, xhr, formData) {
+            //     //         // Gets triggered when the form is actually being sent.
+            //     //         // Hide the success button or the complete form.
+            //     //         var formValues = $('#new_post_form').serializeArray();
+            //     //         $.each(formValues, function(index, elm){
+            //     //             console.log(elm.name,elm.value)
+            //     //             formData.append(elm.name,elm.value);
+            //     //         });
+            //     //         ff=formData;
+            //     //     //    console.log(formData.get('title'))
+            //     //         console.log('sending.....')
+            //     //
+            //     //     });
+            //     //
+            //     //     this.on("successmultiple", function(files, response) {
+            //     //         // Gets triggered when the files have successfully been sent.
+            //     //         // Redirect user or notify of success.
+            //     //         console.log('success.....')
+            //     //     });
+            //     //     this.on("errormultiple", function(files, response) {
+            //     //         // Gets triggered when there was an error sending the files.
+            //     //         // Maybe show form again, and notify user of error
+            //     //         console.log('error......')
+            //     //     });
+            //     // }
+            //     // success: function (file, response) {
+            //     //     var imgName = response;
+            //     //     file.previewElement.classList.add("dz-success");
+            //     //     console.log("Successfully uploaded :" + imgName);
+            //     // },
+            //     // error: function (file, response) {
+            //     //     file.previewElement.classList.add("dz-error");
+            //     // }
+            // });
+
+            Dropzone.autoDiscover = false;
+             myDropzone = new Dropzone("#dropzone-target", {
+                url: "/submit_post",
+                paramName: function(n) { return 'source_file[]';},
+                autoProcessQueue: false,
+                uploadMultiple: true,
+                parallelUploads: 10,
+                acceptedFiles: 'image/*',
+                init: function() {
+                     dropzonejs = this;
+                    // First change the button to actually tell Dropzone to process the queue.
+
+                    $('#save_and_post').on("click", function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('haj?')
+                        console.log(dropzonejs.getQueuedFiles().length)
+                        if (dropzonejs.getQueuedFiles().length > 0) {
+                            console.log('process....')
+                            dropzonejs.processQueue();
+                        } else {
+                            $.ajax({
+                                type: "POST",
+                                url: '/submit_post',
+                                data: $( "#new_post_form" ).serialize()
+                            }).done(function(data){
+                                eval($(data).html());
+                            });
+                        }
+                    });
+                    // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
+                    // of the sending event because uploadMultiple is set to true.
+                    this.on("sendingmultiple", function(file, xhr, formData) {
+                        // Gets triggered when the form is actually being sent.
+                        // Hide the success button or the complete form.
+                        var formValues = $('#new_post_form').serializeArray();
+                        $.each(formValues, function(index, elm){
+                            console.log(elm.name,elm.value)
+                            formData.append(elm.name,elm.value);
+                        });
+                        ff=formData;
+                    //    console.log(formData.get('title'))
+                        console.log('sending.....')
+
+                    });
+
+                    this.on("successmultiple", function(files, response) {
+                        // Gets triggered when the files have successfully been sent.
+                        // Redirect user or notify of success.
+                        console.log('success.....')
+                    });
+                    this.on("errormultiple", function(files, response) {
+                        // Gets triggered when there was an error sending the files.
+                        // Maybe show form again, and notify user of error
+                        console.log('error......')
+                    });
+                }
+                // success: function (file, response) {
+                //     var imgName = response;
+                //     file.previewElement.classList.add("dz-success");
+                //     console.log("Successfully uploaded :" + imgName);
+                // },
+                // error: function (file, response) {
+                //     file.previewElement.classList.add("dz-error");
+                // }
             });
+
         });
     </script>
 {{/section}}
